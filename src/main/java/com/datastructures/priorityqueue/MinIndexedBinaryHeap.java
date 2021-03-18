@@ -7,13 +7,11 @@
  *
  * <p>As convention, I denote 'ki' as the index value in the domain [0, N) associated with key k,
  * therefore: ki = map[k]
- *
- *
  */
 package com.datastructures.priorityqueue;
 
 public class MinIndexedBinaryHeap<T extends Comparable<T>> extends MinIndexedDHeap<T> {
-  public MinIndexedBinaryHeap(int maxSize) {
-    super(2, maxSize);
-  }
+    public MinIndexedBinaryHeap(int maxSize) {
+        super(2, maxSize);
+    }
 }
