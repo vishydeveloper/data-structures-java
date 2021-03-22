@@ -1,5 +1,5 @@
 /**
- * Medium speed suffix array implementation. Time Complexity: O(nlog^2(n))
+ * Medium speed suffix leetcode.array implementation. Time Complexity: O(nlog^2(n))
  */
 package com.datastructures.suffixarray;
 
@@ -34,7 +34,7 @@ public class SuffixArrayMed extends SuffixArray {
         super(text);
     }
 
-    // Construct a suffix array in O(nlog^2(n))
+    // Construct a suffix leetcode.array in O(nlog^2(n))
     @Override
     protected void construct() {
         sa = new int[N];
@@ -85,7 +85,7 @@ public class SuffixArrayMed extends SuffixArray {
             if (newRank == N - 1) break;
         }
 
-        // Fill suffix array
+        // Fill suffix leetcode.array
         for (int i = 0; i < N; i++) {
             sa[i] = ranks[i].originalIndex;
             ranks[i] = null;

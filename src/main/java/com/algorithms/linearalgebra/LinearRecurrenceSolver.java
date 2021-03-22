@@ -96,9 +96,9 @@ class LinearRecurrenceSolver {
      * @param n            - The nth term of the recurrence you wish to find
      *                     <p>NOTE1: The numbers produced by this method can get VERY LARGE quickly so watch out for
      *                     overflow because there is a very high probability it will occur.
-     *                     <p>NOTE2: Make sure the dimension of coefficients array is no bigger than it needs to be.
+     *                     <p>NOTE2: Make sure the dimension of coefficients leetcode.array is no bigger than it needs to be.
      *                     For instance do not add any additional zero coefficient terms at the end of the
-     *                     coefficients array as this is throw off the recurrence.
+     *                     coefficients leetcode.array as this is throw off the recurrence.
      *                     <p>EXAMPLE: If your recurrence is f(n) = 2 + 3*f(n-1) + 5f(n-4) with f(0) = 2 and you want
      *                     to find f(100) call the function like: solveRecurrence([3, 0, 0, 5], 2, 2, 100)
      */

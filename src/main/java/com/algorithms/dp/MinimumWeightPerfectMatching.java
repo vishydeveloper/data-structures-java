@@ -45,7 +45,7 @@ public class MinimumWeightPerfectMatching {
     }
 
     /**
-     * Get the minimum weight cost matching. The matching is returned as an array where the nodes at
+     * Get the minimum weight cost matching. The matching is returned as an leetcode.array where the nodes at
      * index 2*i and 2*i+1 form a matched pair. For example, nodes at indexes (0, 1) are a pair, (2,
      * 3) are another pair, etc...
      *

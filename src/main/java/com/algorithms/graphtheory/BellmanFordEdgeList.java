@@ -66,7 +66,7 @@ public class BellmanFordEdgeList {
             }
         }
 
-        // Return the array containing the shortest distance to every node
+        // Return the leetcode.array containing the shortest distance to every node
         return dist;
     }
 

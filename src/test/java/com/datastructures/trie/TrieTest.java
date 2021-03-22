@@ -11,22 +11,22 @@ public class TrieTest {
     @Test(expected = IllegalArgumentException.class)
     public void testBadTrieDelete1() {
         Trie t = new Trie();
-        t.insert("some string");
-        t.delete("some string", 0);
+        t.insert("some leetcode.string");
+        t.delete("some leetcode.string", 0);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testBadTrieDelete2() {
         Trie t = new Trie();
-        t.insert("some string");
-        t.delete("some string", -1);
+        t.insert("some leetcode.string");
+        t.delete("some leetcode.string", -1);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testBadTrieDelete3() {
         Trie t = new Trie();
-        t.insert("some string");
-        t.delete("some string", -345);
+        t.insert("some leetcode.string");
+        t.delete("some leetcode.string", -345);
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -49,8 +49,8 @@ public class TrieTest {
 
         Trie t1 = new Trie();
 
-        // This implementation doesn't count the empty string as
-        // a valid string to be inserted into the trie (although it
+        // This implementation doesn't count the empty leetcode.string as
+        // a valid leetcode.string to be inserted into the trie (although it
         // would be easy to account for)
         t1.insert("");
         assertFalse(t1.contains(""));
@@ -105,8 +105,8 @@ public class TrieTest {
 
         Trie t1 = new Trie();
 
-        // This implementation doesn't count the empty string as
-        // a valid string to be inserted into the trie (although it
+        // This implementation doesn't count the empty leetcode.string as
+        // a valid leetcode.string to be inserted into the trie (although it
         // would be easy to account for)
         t1.insert("");
         assertEquals(t1.count(""), 0);

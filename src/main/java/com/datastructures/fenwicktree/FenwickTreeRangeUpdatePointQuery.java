@@ -7,28 +7,28 @@ package com.datastructures.fenwicktree;
 
 public class FenwickTreeRangeUpdatePointQuery {
 
-    // The size of the array holding the Fenwick tree values
+    // The size of the leetcode.array holding the Fenwick leetcode.tree values
     final int N;
 
-    // This array contains the original Fenwick tree range
+    // This leetcode.array contains the original Fenwick leetcode.tree range
     // values from when it was first created.
     private long[] originalTree;
 
-    // The current tree will contain the updated range values
+    // The current leetcode.tree will contain the updated range values
     private long[] currentTree;
 
-    // Construct a Fenwick tree with an initial set of values.
-    // The 'values' array MUST BE ONE BASED meaning values[0]
+    // Construct a Fenwick leetcode.tree with an initial set of values.
+    // The 'values' leetcode.array MUST BE ONE BASED meaning values[0]
     // does not get used, O(n) construction.
     public FenwickTreeRangeUpdatePointQuery(long[] values) {
 
-        if (values == null) throw new IllegalArgumentException("Values array cannot be null!");
+        if (values == null) throw new IllegalArgumentException("Values leetcode.array cannot be null!");
 
         N = values.length;
         values[0] = 0L;
 
-        // Make a clone of the values array since we manipulate
-        // the array in place destroying all its original content.
+        // Make a clone of the values leetcode.array since we manipulate
+        // the leetcode.array in place destroying all its original content.
         long[] fenwickTree = values.clone();
 
         for (int i = 1; i < N; i++) {
@@ -55,8 +55,8 @@ public class FenwickTreeRangeUpdatePointQuery {
     }
 
     // Get the value at a specific index. The logic behind this method is the
-    // same as finding the prefix sum in a Fenwick tree except that you need to
-    // take the difference between the current tree and the original to get
+    // same as finding the prefix sum in a Fenwick leetcode.tree except that you need to
+    // take the difference between the current leetcode.tree and the original to get
     // the point value.
     public long get(int i) {
         return prefixSum(i, currentTree) - prefixSum(i - 1, originalTree);

@@ -1,5 +1,5 @@
 /**
- * This file shows you how to find the maximal subarray in an integer array Time complexity: O(n)
+ * This file shows you how to find the maximal subarray in an integer leetcode.array Time complexity: O(n)
  *
  * @author William Fiset, william.alexandre.fiset@gmail.com
  */

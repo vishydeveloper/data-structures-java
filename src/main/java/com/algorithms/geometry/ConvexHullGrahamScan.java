@@ -12,7 +12,7 @@ import java.util.*;
 
 public class ConvexHullGrahamScan {
 
-    // Construct a convex hull and return it as a stack of points
+    // Construct a convex hull and return it as a leetcode.stack of points
     public static Stack<Point2D> createConvexHull(Point2D[] pts) {
         int k1, k2, N = pts.length;
         Stack<Point2D> hull = new Stack<Point2D>();

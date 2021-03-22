@@ -32,7 +32,7 @@ public class MinSparseTable {
         System.out.println(sparseTable.queryMinIndex(3, 6)); // prints 5
     }
 
-    // The number of elements in the original input array.
+    // The number of elements in the original input leetcode.array.
     private int n;
 
     // The maximum power of 2 needed. This value is floor(log2(n))

@@ -1,5 +1,5 @@
 /**
- * An implementation of the Rabin-Karp algorithm using rolling positional hashing.
+ * An implementation of the Rabin-Karp algorithm using rolling positional leetcode.hashing.
  *
  * @author William Fiset, william.alexandre.fiset@gmail.com
  */
@@ -13,7 +13,7 @@ public class RabinKarp {
     // Our alphabet size is 95 because there are only 95 printable ASCII characters
     // which are in the range between [32, 127). We also need to add +1 to our alphabet
     // size because we're going to redefine the first ASCII character (the space character)
-    // to be 1 instead of 0 to avoid collisions where the string ' ' hashes to the
+    // to be 1 instead of 0 to avoid collisions where the leetcode.string ' ' hashes to the
     // same value as '   ' since 0*95^0 = 0*95^0 + 0*95^1 + 0*95^2
     private static final long ALPHABET_BASE = 95 + 1;
     private static final long[] ALPHABET = new long[127];
@@ -41,7 +41,7 @@ public class RabinKarp {
         }
     }
 
-    // Example usage of the Rabin-Karp string matching algorithm
+    // Example usage of the Rabin-Karp leetcode.string matching algorithm
     public static void main(String[] args) {
 
         String str = "P@TTerNabcdefP@TTerNP@TTerNabcdefabcdefabcdefabcdefP@TTerN";
@@ -163,7 +163,7 @@ public class RabinKarp {
     // where x_i is a character value and 'A' is the alphabet size this method adds
     // an additional term 'x_n+1*A^(n+1)' to the rolling hash.
     //
-    // firstValue - This is x_n+1, the first character of this string
+    // firstValue - This is x_n+1, the first character of this leetcode.string
     // alphabetBasePower - A^(n+1)
     private static long addLeft(
             long rollingHash, long alphabetBasePower, char firstValue, int modIndex) {
@@ -175,7 +175,7 @@ public class RabinKarp {
     // where x_i is a character value and 'A' is the alphabet size this method removes
     // the first term 'x_n*A^n' from the rolling hash.
     //
-    // firstValue - This is x_n, the first character of this string
+    // firstValue - This is x_n, the first character of this leetcode.string
     // alphabetBasePower - A^n
     private static long removeLeft(
             long rollingHash, long alphabetBasePower, char firstValue, int modIndex) {
@@ -183,7 +183,7 @@ public class RabinKarp {
         return (rollingHash + MODS[modIndex]) % MODS[modIndex];
     }
 
-    // Computes the hashes for a particular string
+    // Computes the hashes for a particular leetcode.string
     public static long[] computeHash(String str) {
 
         long[] rollingHashes = new long[N_HASHES];

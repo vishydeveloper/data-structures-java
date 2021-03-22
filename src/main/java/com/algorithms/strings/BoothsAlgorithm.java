@@ -1,13 +1,13 @@
 /**
  * This file contains an implementation of Booths algorithms which finds the lexicographically
- * smallest string rotation.
+ * smallest leetcode.string rotation.
  */
 package com.algorithms.strings;
 
 public class BoothsAlgorithm {
 
     // Performs Booths algorithm returning the earliest index of the
-    // lexicographically smallest string rotation. Note that comparisons
+    // lexicographically smallest leetcode.string rotation. Note that comparisons
     // are done using ASCII values, so mixing lowercase and uppercase
     // letters may give you unexpected results, O(n)
     public static int leastCyclicRotation(String s) {
@@ -35,13 +35,13 @@ public class BoothsAlgorithm {
         String s = "abcde";
         int index = leastCyclicRotation(s);
 
-        // Outputs 0 since the string is already in its least rotation
+        // Outputs 0 since the leetcode.string is already in its least rotation
         System.out.println(index);
 
         s = "cdeab";
         index = leastCyclicRotation(s);
 
-        // Outputs 3 since rotating the string 3 times to the left makes
+        // Outputs 3 since rotating the leetcode.string 3 times to the left makes
         // the smallest rotation: "cdeab" -> "deabc" -> "eabcd" -> "abcde"
         System.out.println(index);
     }

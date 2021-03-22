@@ -1,5 +1,5 @@
 /**
- * A generic implementation of a D-ary heap inspired by the work of David Brink.
+ * A generic implementation of a D-ary leetcode.heap inspired by the work of David Brink.
  *
  * @author David Brink, William Fiset
  */
@@ -12,7 +12,7 @@ public class MinDHeap<T extends Comparable<T>> {
     private int d, n, sz;
     private int[] child, parent;
 
-    // Initializes a D-ary heap with a maximum capacity of n
+    // Initializes a D-ary leetcode.heap with a maximum capacity of n
     public MinDHeap(int degree, int maxNodes) {
         d = Math.max(2, degree);
         n = Math.max(d, maxNodes);

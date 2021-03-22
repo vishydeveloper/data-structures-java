@@ -1,5 +1,5 @@
 /**
- * This algorithm finds the center(s) of a tree.
+ * This algorithm finds the center(s) of a leetcode.tree.
  *
  * <p>Time complexity: O(V+E)
  *
@@ -54,7 +54,7 @@ public class TreeCenter {
      * ********* TESTING *********
      */
 
-    // Create an empty tree as a adjacency list.
+    // Create an empty leetcode.tree as a adjacency list.
     public static List<List<Integer>> createEmptyTree(int n) {
         List<List<Integer>> tree = new ArrayList<>(n);
         for (int i = 0; i < n; i++) tree.add(new LinkedList<>());

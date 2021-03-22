@@ -12,7 +12,7 @@ package com.algorithms.other;
 public class PowerSet {
 
     // Use the fact that numbers represented in binary can be
-    // used to generate all the subsets of an array
+    // used to generate all the subsets of an leetcode.array
     static void powerSetUsingBinary(int[] set) {
 
         final int N = set.length;
@@ -28,8 +28,8 @@ public class PowerSet {
         }
     }
 
-    // Recursively generate the powerset (set of all subsets) of an array by maintaining
-    // a boolean array used to indicate which element have been selected
+    // Recursively generate the powerset (set of all subsets) of an leetcode.array by maintaining
+    // a boolean leetcode.array used to indicate which element have been selected
     static void powerSetRecursive(int at, int[] set, boolean[] used) {
 
         if (at == set.length) {

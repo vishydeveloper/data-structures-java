@@ -1,6 +1,6 @@
 /**
  * The DoubleHashingTestObject is an object to test the functionality of the hash-table implemented
- * with double hashing.
+ * with double leetcode.hashing.
  */
 package com.datastructures.hashtable;
 

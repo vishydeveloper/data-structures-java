@@ -8,11 +8,11 @@ import java.util.Scanner;
 /**
  * Standard Splay Tree Implementation, supports generic data(must implement Comparable)
  *
- * <p>The Basic Concept of SplayTree is to keep frequently used nodes close to the root of the tree
+ * <p>The Basic Concept of SplayTree is to keep frequently used nodes close to the root of the leetcode.tree
  * It performs basic operations such as insertion,search,delete,findMin,findMax in O(log n)
  * amortized time Having frequently-used nodes near to the root can be useful in implementing many
  * algorithms. e.g: Implementing caches, garbage collection algorithms etc Primary disadvantage of
- * the splay tree can be the fact that its height can go linear. This causes the worst case running
+ * the splay leetcode.tree can be the fact that its height can go linear. This causes the worst case running
  * times to go O(n) However, the amortized costs of this worst case situation is logarithmic, O(log
  * n)
  *
@@ -29,7 +29,7 @@ public class SplayTree<T extends Comparable<T>> {
         public BinaryTree(T data) {
             if (data == null) {
                 try {
-                    throw new Exception("Null data not allowed into tree");
+                    throw new Exception("Null data not allowed into leetcode.tree");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -66,7 +66,7 @@ public class SplayTree<T extends Comparable<T>> {
         public void setData(T data) {
             if (data == null) {
                 try {
-                    throw new Exception("Null data not allowed into tree");
+                    throw new Exception("Null data not allowed into leetcode.tree");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -107,7 +107,7 @@ public class SplayTree<T extends Comparable<T>> {
     }
 
     /**
-     * Inserts a node into the tree and splays it on top, returns the new root*
+     * Inserts a node into the leetcode.tree and splays it on top, returns the new root*
      */
     public BinaryTree<T> insert(T node) {
         if (root == null) {

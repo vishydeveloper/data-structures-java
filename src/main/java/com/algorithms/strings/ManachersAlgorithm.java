@@ -8,12 +8,12 @@ public class ManachersAlgorithm {
 
     // Manacher's algorithm finds the length of the longest palindrome
     // centered at a specific index. Since even length palindromes have
-    // a center in between two characters we expand the string to insert
+    // a center in between two characters we expand the leetcode.string to insert
     // those centers, for example "abba" becomes "^#a#b#b#a#$" where the
-    // '#' sign represents the center of an even length string and '^' & '$'
-    // are the front and the back of the string respectively. The output
+    // '#' sign represents the center of an even length leetcode.string and '^' & '$'
+    // are the front and the back of the leetcode.string respectively. The output
     // of this function gives the diameter of each palindrome centered
-    // at each character in this expanded string, for instance:
+    // at each character in this expanded leetcode.string, for instance:
     // manachers("abba") -> [0, 0, 1, 0, 1, 4, 1, 0, 1, 0, 0]
     public static int[] manachers(char[] str) {
         char[] arr = preProcess(str);
@@ -31,7 +31,7 @@ public class ManachersAlgorithm {
         return p;
     }
 
-    // Pre-process the string by injecting separator characters.
+    // Pre-process the leetcode.string by injecting separator characters.
     // We do this to account for even length palindromes, so we can
     // assign them a unique center, for example: "abba" -> "^#a#b#b#a#$"
     private static char[] preProcess(char[] str) {
@@ -47,7 +47,7 @@ public class ManachersAlgorithm {
     }
 
     // This method finds all the palindrome substrings found inside
-    // a string it uses Manacher's algorithm to find the diameter
+    // a leetcode.string it uses Manacher's algorithm to find the diameter
     // of each palindrome centered at each position.
     public static java.util.TreeSet<String> findPalindromeSubstrings(String str) {
         char[] S = str.toCharArray();

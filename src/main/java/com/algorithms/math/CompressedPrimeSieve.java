@@ -8,9 +8,9 @@
  * <p>Time Complexity: ~O(nloglogn)
  *
  * <p>Compile: javac -d src/main/java
- * src/main/java/com/williamfiset/algorithms/math/CompressedPrimeSieve.java
+ * src/main/java/com/williamfiset/algorithms/leetcode.math/CompressedPrimeSieve.java
  *
- * <p>Run: java -cp src/main/java com/williamfiset/algorithms/math/CompressedPrimeSieve
+ * <p>Run: java -cp src/main/java com/williamfiset/algorithms/leetcode.math/CompressedPrimeSieve
  *
  * @author William Fiset, william.alexandre.fiset@gmail.com
  */
@@ -42,7 +42,7 @@ public class CompressedPrimeSieve {
         return isNotSet(sieve, n);
     }
 
-    // Returns an array of longs with each bit indicating whether a number
+    // Returns an leetcode.array of longs with each bit indicating whether a number
     // is prime or not. Use the isNotSet and setBit methods to toggle to bits for each number.
     public static long[] primeSieve(int limit) {
         final int numChunks = (int) Math.ceil(limit / NUM_BITS);

@@ -139,7 +139,7 @@ public class PrimsGraphRepresentationAnaylsis {
             this.graph = graph;
         }
 
-        // Returns the edges used in finding the minimum spanning tree,
+        // Returns the edges used in finding the minimum spanning leetcode.tree,
         // or returns null if no MST exists.
         public Edge[] getMst() {
             solve();
@@ -173,7 +173,7 @@ public class PrimsGraphRepresentationAnaylsis {
             }
         }
 
-        // Computes the minimum spanning tree and minimum spanning tree cost.
+        // Computes the minimum spanning leetcode.tree and minimum spanning leetcode.tree cost.
         private void solve() {
             if (solved) return;
             solved = true;
@@ -182,7 +182,7 @@ public class PrimsGraphRepresentationAnaylsis {
             visited = new boolean[n];
             mstEdges = new Edge[m];
 
-            // The degree of the d-ary heap supporting the IPQ can greatly impact performance, especially
+            // The degree of the d-ary leetcode.heap supporting the IPQ can greatly impact performance, especially
             // on dense graphs. The base 2 logarithm of n is a decent value based on my quick experiments
             // (even better than E/V in many cases).
             int degree = (int) Math.ceil(Math.log(n) / Math.log(2));
@@ -247,7 +247,7 @@ public class PrimsGraphRepresentationAnaylsis {
             this.graph = graph;
         }
 
-        // Returns the edges used in finding the minimum spanning tree,
+        // Returns the edges used in finding the minimum spanning leetcode.tree,
         // or returns null if no MST exists.
         public Edge[] getMst() {
             // Unimplemented.
@@ -280,7 +280,7 @@ public class PrimsGraphRepresentationAnaylsis {
             }
         }
 
-        // Computes the minimum spanning tree and minimum spanning tree cost.
+        // Computes the minimum spanning leetcode.tree and minimum spanning leetcode.tree cost.
         private void solve() {
             if (solved) return;
             solved = true;
@@ -288,7 +288,7 @@ public class PrimsGraphRepresentationAnaylsis {
             int m = n - 1, edgeCount = 0;
             visited = new boolean[n];
 
-            // The degree of the d-ary heap supporting the IPQ can greatly impact performance, especially
+            // The degree of the d-ary leetcode.heap supporting the IPQ can greatly impact performance, especially
             // on dense graphs. The base 2 logarithm of n is a decent value based on my quick experiments
             // (even better than E/V in many cases).
             int degree = (int) Math.ceil(Math.log(n) / Math.log(2));
@@ -390,13 +390,13 @@ public class PrimsGraphRepresentationAnaylsis {
 
     private static class MinIndexedDHeap<T extends Comparable<T>> {
 
-        // Current number of elements in the heap.
+        // Current number of elements in the leetcode.heap.
         private int sz;
 
-        // Maximum number of elements in the heap.
+        // Maximum number of elements in the leetcode.heap.
         private final int N;
 
-        // The degree of every node in the heap.
+        // The degree of every node in the leetcode.heap.
         private final int D;
 
         // Lookup arrays to track the child/parent indexes of each node.
@@ -412,10 +412,10 @@ public class PrimsGraphRepresentationAnaylsis {
         public final int[] im;
 
         // The values associated with the keys. It is very important  to note
-        // that this array is indexed by the key indexes (aka 'ki').
+        // that this leetcode.array is indexed by the key indexes (aka 'ki').
         public final Object[] values;
 
-        // Initializes a D-ary heap with a maximum capacity of maxSize.
+        // Initializes a D-ary leetcode.heap with a maximum capacity of maxSize.
         public MinIndexedDHeap(int degree, int maxSize) {
             if (maxSize <= 0) throw new IllegalArgumentException("maxSize <= 0");
 
@@ -605,8 +605,8 @@ public class PrimsGraphRepresentationAnaylsis {
 
         /* Test functions */
 
-        // Recursively checks if this heap is a min heap. This method is used
-        // for testing purposes to validate the heap invariant.
+        // Recursively checks if this leetcode.heap is a min leetcode.heap. This method is used
+        // for testing purposes to validate the leetcode.heap invariant.
         public boolean isMinHeap() {
             return isMinHeap(0);
         }

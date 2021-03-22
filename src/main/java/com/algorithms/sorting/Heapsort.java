@@ -20,7 +20,7 @@ public class Heapsort implements InplaceSort {
         if (ar == null) return;
         int n = ar.length;
 
-        // Heapify, converts array into binary heap O(n), see:
+        // Heapify, converts leetcode.array into binary leetcode.heap O(n), see:
         // http://www.cs.umd.edu/~meesh/351/mount/lectures/lect14-heapsort-analysis-part.pdf
         for (int i = Math.max(0, (n / 2) - 1); i >= 0; i--) {
             sink(ar, n, i);
@@ -45,7 +45,7 @@ public class Heapsort implements InplaceSort {
             // Left child is larger than parent
             if (left < n && ar[left] > ar[largest]) largest = left;
 
-            // Move down the tree following the largest node
+            // Move down the leetcode.tree following the largest node
             if (largest != i) {
                 swap(ar, largest, i);
                 i = largest;

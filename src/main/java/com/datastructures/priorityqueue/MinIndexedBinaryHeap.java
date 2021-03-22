@@ -1,5 +1,5 @@
 /**
- * An implementation of an indexed binary heap priority queue.
+ * An implementation of an indexed binary leetcode.heap priority queue.
  *
  * <p>This implementation supports arbitrary keys with comparable values. To use arbitrary keys
  * (such as strings or objects) first map all your keys to the integer domain [0, N) where N is the

@@ -1,10 +1,10 @@
 /**
- * This file shows you how to use a suffix array to determine if a pattern exists within a text.
- * This implementation has the advantage that once the suffix array is built queries can be very
+ * This file shows you how to use a suffix leetcode.array to determine if a pattern exists within a text.
+ * This implementation has the advantage that once the suffix leetcode.array is built queries can be very
  * fast.
  *
- * <p>Time complexity: O(nlogn) for suffix array construction and O(mlogn) time for individual
- * queries (where m is query string length). As noted below, depending on the length of the string
+ * <p>Time complexity: O(nlogn) for suffix leetcode.array construction and O(mlogn) time for individual
+ * queries (where m is query leetcode.string length). As noted below, depending on the length of the leetcode.string
  * (if it is very large) it may be faster to use KMP or if you're doing a lot of queries on small
  * strings then Rabin-Karp in combination with a bloom filter.
  *
@@ -19,7 +19,7 @@ public class SubstringVerificationSuffixArray {
     public static void main(String[] args) {
 
         String pattern = "hello world";
-        String text = "hello lemon Lennon wallet world tree cabbage hello world teapot calculator";
+        String text = "hello lemon Lennon wallet world leetcode.tree cabbage hello world teapot calculator";
         SuffixArray sa = new SuffixArray(text);
         System.out.println(sa.contains(pattern));
         System.out.println(sa.contains("this pattern does not exist"));
@@ -82,7 +82,7 @@ public class SubstringVerificationSuffixArray {
 
         // Runs on O(mlog(n)) where m is the length of the substring
         // and n is the length of the text. Depending on the length
-        // of the string (if it is very large) it may be faster to
+        // of the leetcode.string (if it is very large) it may be faster to
         // use KMP or if you're doing a lot of queries then Rabin-Karp
         // in combination with a bloom filter.
         //

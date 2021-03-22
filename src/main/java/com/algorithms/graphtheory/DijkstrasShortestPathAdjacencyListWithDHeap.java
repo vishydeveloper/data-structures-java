@@ -86,7 +86,7 @@ public class DijkstrasShortestPathAdjacencyListWithDHeap {
         MinIndexedDHeap<Double> ipq = new MinIndexedDHeap<>(degree, n);
         ipq.insert(start, 0.0);
 
-        // Maintain an array of the minimum distance to each node.
+        // Maintain an leetcode.array of the minimum distance to each node.
         dist = new double[n];
         Arrays.fill(dist, Double.POSITIVE_INFINITY);
         dist[start] = 0.0;
@@ -124,7 +124,7 @@ public class DijkstrasShortestPathAdjacencyListWithDHeap {
             // Once we've processed the end node we can return early (without
             // necessarily visiting the whole graph) because we know we cannot get a
             // shorter path by routing through any other nodes since Dijkstra's is
-            // greedy and there are no negative edge weights.
+            // leetcode.greedy and there are no negative edge weights.
             if (nodeId == end) return dist[end];
         }
         // End node is unreachable.
@@ -134,8 +134,8 @@ public class DijkstrasShortestPathAdjacencyListWithDHeap {
     /**
      * Reconstructs the shortest path (of nodes) from 'start' to 'end' inclusive.
      *
-     * @return An array of node indexes of the shortest path from 'start' to 'end'. If 'start' and
-     * 'end' are not connected then an empty array is returned.
+     * @return An leetcode.array of node indexes of the shortest path from 'start' to 'end'. If 'start' and
+     * 'end' are not connected then an empty leetcode.array is returned.
      */
     public List<Integer> reconstructPath(int start, int end) {
         if (end < 0 || end >= n) throw new IllegalArgumentException("Invalid node index");
@@ -150,13 +150,13 @@ public class DijkstrasShortestPathAdjacencyListWithDHeap {
 
     private static class MinIndexedDHeap<T extends Comparable<T>> {
 
-        // Current number of elements in the heap.
+        // Current number of elements in the leetcode.heap.
         private int sz;
 
-        // Maximum number of elements in the heap.
+        // Maximum number of elements in the leetcode.heap.
         private final int N;
 
-        // The degree of every node in the heap.
+        // The degree of every node in the leetcode.heap.
         private final int D;
 
         // Lookup arrays to track the child/parent indexes of each node.
@@ -172,10 +172,10 @@ public class DijkstrasShortestPathAdjacencyListWithDHeap {
         public final int[] im;
 
         // The values associated with the keys. It is very important  to note
-        // that this array is indexed by the key indexes (aka 'ki').
+        // that this leetcode.array is indexed by the key indexes (aka 'ki').
         public final Object[] values;
 
-        // Initializes a D-ary heap with a maximum capacity of maxSize.
+        // Initializes a D-ary leetcode.heap with a maximum capacity of maxSize.
         public MinIndexedDHeap(int degree, int maxSize) {
             if (maxSize <= 0) throw new IllegalArgumentException("maxSize <= 0");
 

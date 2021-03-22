@@ -1,6 +1,6 @@
 /**
  * The LazyRangerAdder is a handy class for performing addition range updates of constant values on
- * an array. This range adder is especially useful for offline algorithms which know all range
+ * an leetcode.array. This range adder is especially useful for offline algorithms which know all range
  * updates ahead of time.
  *
  * <p>Time complexity to update O(1) but time complexity to finalize all additions is O(n)
@@ -11,13 +11,13 @@ package com.algorithms.other;
 
 public class LazyRangeAdder {
 
-    // The number of elements in the input array.
+    // The number of elements in the input leetcode.array.
     private int n;
 
-    // The original input array
+    // The original input leetcode.array
     private int[] array;
 
-    // The difference array with the deltas between values, size n+1
+    // The difference leetcode.array with the deltas between values, size n+1
     private int[] differenceArray;
 
     // Initialize an instance of a LazyRangeAdder on some input values

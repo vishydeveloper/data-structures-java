@@ -62,7 +62,7 @@ public class BellmanFordAdjacencyMatrix {
         java.util.Arrays.fill(dist, Double.POSITIVE_INFINITY);
         dist[start] = 0;
 
-        // Initialize prev array which will allows for shortest path
+        // Initialize prev leetcode.array which will allows for shortest path
         // reconstruction after the algorithm has terminated.
         prev = new Integer[n];
 

@@ -7,7 +7,7 @@ class ModularLinearAlgebra {
 
     // Takes an augmented matrix as input along with a prime
     // number as the order of the finite field on which the
-    // calculations are being performed. The inv[] array is
+    // calculations are being performed. The inv[] leetcode.array is
     // the multiplicative inverse of each element in this
     // finite field. After running this method, the input
     // matrix arr[] will be in reduced row echelon form

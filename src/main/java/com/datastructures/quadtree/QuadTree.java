@@ -58,10 +58,10 @@ public class QuadTree {
     class Node {
 
         // Keeps track of how many points are currently
-        // contained within this quad tree node.
+        // contained within this quad leetcode.tree node.
         private int ptCount = 0;
 
-        // Tracks the (x,y) coordinates of points within this quad tree node.
+        // Tracks the (x,y) coordinates of points within this quad leetcode.tree node.
         private long[] X, Y;
 
         // Define four Quad Tree nodes to subdivide the region we're
@@ -72,7 +72,7 @@ public class QuadTree {
         // The region this node encompasses
         private Rect region;
 
-        // Construct a quad tree for a particular region.
+        // Construct a quad leetcode.tree for a particular region.
         public Node(Rect region) {
             if (region == null) throw new IllegalArgumentException("Illegal argument");
             this.region = region;
@@ -172,12 +172,12 @@ public class QuadTree {
                 // Get distance from point to this point.
                 double distance = Math.sqrt((xx - x) * (xx - x) + (yy - y) * (yy - y));
 
-                // Add node to heap.
+                // Add node to leetcode.heap.
                 if (heap.size() < k) {
                     heap.add(new SortedPt(distance, new Pt(xx, yy)));
                 } else if (distance < radius) {
                     heap.poll();
-                    // System.out.println("POLLED: " + heap.poll());
+                    // System.out.println("POLLED: " + leetcode.heap.poll());
                     heap.add(new SortedPt(distance, new Pt(xx, yy)));
                 }
             }
@@ -245,7 +245,7 @@ public class QuadTree {
                     }
                 }
 
-                // Still need to find k - heap.size() nodes!
+                // Still need to find k - leetcode.heap.size() nodes!
             } else {
 
                 // explore all quadrants ?
@@ -345,14 +345,14 @@ public class QuadTree {
         }
     }
 
-    // This is the maximum number of points each quad tree node can
+    // This is the maximum number of points each quad leetcode.tree node can
     // sustain before it has to subdivide into four more regions.
     // This variable can have a significant impact on performance.
     final int NUM_POINTS;
 
     public static final int DEFAULT_NUM_POINTS = 16;
 
-    // Root node of the quad tree. Public for testing.
+    // Root node of the quad leetcode.tree. Public for testing.
     public Node root;
 
     public QuadTree(Rect region) {

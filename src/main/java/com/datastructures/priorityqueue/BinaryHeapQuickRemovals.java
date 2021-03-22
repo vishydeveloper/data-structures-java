@@ -1,6 +1,6 @@
 /**
- * A min priority queue implementation using a binary heap. This implementation tracks each element
- * inside the binary heap with a hashtable for quick removals.
+ * A min priority queue implementation using a binary leetcode.heap. This implementation tracks each element
+ * inside the binary leetcode.heap with a hashtable for quick removals.
  */
 package com.datastructures.priorityqueue;
 
@@ -14,17 +14,17 @@ import java.util.TreeSet;
 
 public class BinaryHeapQuickRemovals<T extends Comparable<T>> {
 
-    // The number of elements currently inside the heap
+    // The number of elements currently inside the leetcode.heap
     private int heapSize = 0;
 
-    // The internal capacity of the heap
+    // The internal capacity of the leetcode.heap
     private int heapCapacity = 0;
 
-    // A dynamic list to track the elements inside the heap
+    // A dynamic list to track the elements inside the leetcode.heap
     private List<T> heap = null;
 
     // This map keeps track of the possible indices a particular
-    // node value is found in the heap. Having this mapping lets
+    // node value is found in the leetcode.heap. Having this mapping lets
     // us have O(log(n)) removals and O(1) element containment check
     // at the cost of some additional space and minor overhead
     private Map<T, TreeSet<Integer>> map = new HashMap<>();
@@ -46,7 +46,7 @@ public class BinaryHeapQuickRemovals<T extends Comparable<T>> {
         heapSize = heapCapacity = elems.length;
         heap = new ArrayList<T>(heapCapacity);
 
-        // Place all element in heap
+        // Place all element in leetcode.heap
         for (int i = 0; i < heapSize; i++) {
             mapAdd(elems[i], i);
             heap.add(elems[i]);
@@ -67,14 +67,14 @@ public class BinaryHeapQuickRemovals<T extends Comparable<T>> {
         return heapSize == 0;
     }
 
-    // Clears everything inside the heap, O(n)
+    // Clears everything inside the leetcode.heap, O(n)
     public void clear() {
         for (int i = 0; i < heapCapacity; i++) heap.set(i, null);
         heapSize = 0;
         map.clear();
     }
 
-    // Return the size of the heap
+    // Return the size of the leetcode.heap
     public int size() {
         return heapSize;
     }
@@ -87,12 +87,12 @@ public class BinaryHeapQuickRemovals<T extends Comparable<T>> {
         return heap.get(0);
     }
 
-    // Removes the root of the heap, O(log(n))
+    // Removes the root of the leetcode.heap, O(log(n))
     public T poll() {
         return removeAt(0);
     }
 
-    // Test if an element is in heap, O(1)
+    // Test if an element is in leetcode.heap, O(1)
     public boolean contains(T elem) {
 
         // Map lookup to check containment, O(1)
@@ -101,7 +101,7 @@ public class BinaryHeapQuickRemovals<T extends Comparable<T>> {
 
         // Linear scan to check containment, O(n)
         // for(int i = 0; i < heapSize; i++)
-        //   if (heap.get(i).equals(elem))
+        //   if (leetcode.heap.get(i).equals(elem))
         //     return true;
         // return false;
 
@@ -167,11 +167,11 @@ public class BinaryHeapQuickRemovals<T extends Comparable<T>> {
             // If right is smaller set smallest to be right
             if (right < heapSize && less(right, left)) smallest = right;
 
-            // Stop if we're outside the bounds of the tree
+            // Stop if we're outside the bounds of the leetcode.tree
             // or stop early if we cannot sink k anymore
             if (left >= heapSize || less(k, smallest)) break;
 
-            // Move down the tree following the smallest node
+            // Move down the leetcode.tree following the smallest node
             swap(smallest, k);
             k = smallest;
         }
@@ -189,14 +189,14 @@ public class BinaryHeapQuickRemovals<T extends Comparable<T>> {
         mapSwap(i_elem, j_elem, i, j);
     }
 
-    // Removes a particular element in the heap, O(log(n))
+    // Removes a particular element in the leetcode.heap, O(log(n))
     public boolean remove(T element) {
 
         if (element == null) return false;
 
         // Linear removal via search, O(n)
         // for (int i = 0; i < heapSize; i++) {
-        //   if (element.equals(heap.get(i))) {
+        //   if (element.equals(leetcode.heap.get(i))) {
         //     removeAt(i);
         //     return true;
         //   }
@@ -235,13 +235,13 @@ public class BinaryHeapQuickRemovals<T extends Comparable<T>> {
         return removed_data;
     }
 
-    // Recursively checks if this heap is a min heap
+    // Recursively checks if this leetcode.heap is a min leetcode.heap
     // This method is just for testing purposes to make
-    // sure the heap invariant is still being maintained
+    // sure the leetcode.heap invariant is still being maintained
     // Called this method with k=0 to start at the root
     public boolean isMinHeap(int k) {
 
-        // If we are outside the bounds of the heap return true
+        // If we are outside the bounds of the leetcode.heap return true
         if (k >= heapSize) return true;
 
         int left = 2 * k + 1;
@@ -249,7 +249,7 @@ public class BinaryHeapQuickRemovals<T extends Comparable<T>> {
 
         // Make sure that the current node k is less than
         // both of its children left, and right if they exist
-        // return false otherwise to indicate an invalid heap
+        // return false otherwise to indicate an invalid leetcode.heap
         if (left < heapSize && !less(k, left)) return false;
         if (right < heapSize && !less(k, right)) return false;
 
@@ -281,7 +281,7 @@ public class BinaryHeapQuickRemovals<T extends Comparable<T>> {
     }
 
     // Extract an index position for the given value
-    // NOTE: If a value exists multiple times in the heap the highest
+    // NOTE: If a value exists multiple times in the leetcode.heap the highest
     // index is returned (this has arbitrarily been chosen)
     private Integer mapGet(T value) {
         TreeSet<Integer> set = map.get(value);

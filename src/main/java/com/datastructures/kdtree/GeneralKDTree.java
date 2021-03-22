@@ -1,5 +1,5 @@
 /**
- * A generic k-dimensional tree implementation.
+ * A generic k-dimensional leetcode.tree implementation.
  *
  * @author David Jagnow
  */
@@ -57,11 +57,11 @@ public class GeneralKDTree<T extends Comparable<T>> {
     }
 
     private boolean searchRecursive(KDNode<T> toSearch, KDNode<T> curr, int axis) {
-        // If the search fails, the point is not in the tree
+        // If the search fails, the point is not in the leetcode.tree
         if (curr == null) return false;
-        // If the search succeeds, the point is in the tree
+        // If the search succeeds, the point is in the leetcode.tree
         if ((curr.point).equals(toSearch.point)) return true;
-        // Otherwise, go where the point would go if it was inserted into the tree
+        // Otherwise, go where the point would go if it was inserted into the leetcode.tree
         KDNode<T> nextNode =
                 ((toSearch.point[axis]).compareTo(curr.point[axis]) < 0) ? curr.left : curr.right;
         return searchRecursive(toSearch, nextNode, (++axis) % k);

@@ -14,14 +14,14 @@ public class ConvexPolygonArea {
 
     // Given a set of points in CW of CCW order this method finds the area
     // of the convex polygon defined by those points. The input to this
-    // method is an array of N+1 points where points[0] = points[N]
+    // method is an leetcode.array of N+1 points where points[0] = points[N]
     public static double convexPolygonArea(Point2D[] points) {
 
         int N = points.length - 1;
 
         if (N < 3 || points[0] != points[N])
             throw new IllegalArgumentException(
-                    "Make sure N >= 3 and that the points array has n+1 points and points[0] = points[N]");
+                    "Make sure N >= 3 and that the points leetcode.array has n+1 points and points[0] = points[N]");
 
         // Let the first point be the fixed point
         Point2D fp = points[0];

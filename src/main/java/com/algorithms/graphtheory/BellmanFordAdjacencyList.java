@@ -68,7 +68,7 @@ public class BellmanFordAdjacencyList {
                 for (Edge edge : edges)
                     if (dist[edge.from] + edge.cost < dist[edge.to]) dist[edge.to] = Double.NEGATIVE_INFINITY;
 
-        // Return the array containing the shortest distance to every node
+        // Return the leetcode.array containing the shortest distance to every node
         return dist;
     }
 

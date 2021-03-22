@@ -1,6 +1,6 @@
 /**
- * Most of the time when you use an array it's to place integers inside of it, so why not have a
- * super fast integer only array? This file contains an implementation of an integer only array
+ * Most of the time when you use an leetcode.array it's to place integers inside of it, so why not have a
+ * super fast integer only leetcode.array? This file contains an implementation of an integer only leetcode.array
  * which can outperform Java's ArrayList by about a factor of 10-15x! Enjoy!
  */
 package com.datastructures.dynamicarray;
@@ -13,31 +13,31 @@ public class IntArray implements Iterable<Integer> {
     public int len = 0;
     private int capacity = 0;
 
-    // Initialize the array with a default capacity
+    // Initialize the leetcode.array with a default capacity
     public IntArray() {
         this(DEFAULT_CAP);
     }
 
-    // Initialize the array with a certain capacity
+    // Initialize the leetcode.array with a certain capacity
     public IntArray(int capacity) {
         if (capacity < 0) throw new IllegalArgumentException("Illegal Capacity: " + capacity);
         this.capacity = capacity;
         arr = new int[capacity];
     }
 
-    // Given an array make it a dynamic array!
+    // Given an leetcode.array make it a dynamic leetcode.array!
     public IntArray(int[] array) {
         if (array == null) throw new IllegalArgumentException("Array cannot be null");
         arr = java.util.Arrays.copyOf(array, array.length);
         capacity = len = array.length;
     }
 
-    // Returns the size of the array
+    // Returns the size of the leetcode.array
     public int size() {
         return len;
     }
 
-    // Returns true/false on whether the array is empty
+    // Returns true/false on whether the leetcode.array is empty
     public boolean isEmpty() {
         return len == 0;
     }
@@ -52,7 +52,7 @@ public class IntArray implements Iterable<Integer> {
         arr[index] = elem;
     }
 
-    // An an element to this dynamic array
+    // An an element to this dynamic leetcode.array
     public void add(int elem) {
         if (len + 1 >= capacity) {
             if (capacity == 0) capacity = 1;
@@ -64,14 +64,14 @@ public class IntArray implements Iterable<Integer> {
 
     // Removes the element at the specified index in this list.
     // If possible, avoid calling this method as it take O(n) time
-    // to remove an element (since you have to reconstruct the array!)
+    // to remove an element (since you have to reconstruct the leetcode.array!)
     public void removeAt(int rm_index) {
         System.arraycopy(arr, rm_index + 1, arr, rm_index, len - rm_index - 1);
         --len;
         --capacity;
     }
 
-    // Search and remove an element if it is found in the array
+    // Search and remove an element if it is found in the leetcode.array
     // If possible, avoid calling this method as it take O(n) time
     public boolean remove(int elem) {
         for (int i = 0; i < len; i++) {
@@ -83,7 +83,7 @@ public class IntArray implements Iterable<Integer> {
         return false;
     }
 
-    // Reverse the contents of this array
+    // Reverse the contents of this leetcode.array
     public void reverse() {
         for (int i = 0; i < len / 2; i++) {
             int tmp = arr[i];
@@ -92,15 +92,15 @@ public class IntArray implements Iterable<Integer> {
         }
     }
 
-    // Perform a binary search on this array to find an element in O(log(n)) time
-    // Make sure this array is sorted! Returns a value < 0 if item is not found
+    // Perform a binary search on this leetcode.array to find an element in O(log(n)) time
+    // Make sure this leetcode.array is sorted! Returns a value < 0 if item is not found
     public int binarySearch(int key) {
         int index = java.util.Arrays.binarySearch(arr, 0, len, key);
         // if (index < 0) index = -index - 1; // If not found this will tell you where to insert
         return index;
     }
 
-    // Sort this array
+    // Sort this leetcode.array
     public void sort() {
         java.util.Arrays.sort(arr, 0, len);
     }

@@ -29,7 +29,7 @@ public class LazyPrimsAdjacencyMatrix {
 
     // Given an N*N undirected adjacency matrix, that is a
     // graph with matrix[i][j] = matrix[j][i] for all i,j this method
-    // finds the minimum spanning tree cost using Prim's algorithm
+    // finds the minimum spanning leetcode.tree cost using Prim's algorithm
     public static Long prims(Integer[][] graph) {
 
         int n = graph.length;

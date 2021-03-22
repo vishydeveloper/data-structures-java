@@ -4,7 +4,7 @@ import java.util.*;
 
 public final class TestUtils {
 
-    // Generates an array of random values where every number is between
+    // Generates an leetcode.array of random values where every number is between
     // [min, max) and there are possible repeats.
     public static int[] randomIntegerArray(int sz, int min, int max) {
         int[] ar = new int[sz];
@@ -12,7 +12,7 @@ public final class TestUtils {
         return ar;
     }
 
-    // Generates an array of random values where every number is between
+    // Generates an leetcode.array of random values where every number is between
     // [min, max) and there are possible repeats.
     public static long[] randomLongArray(int sz, long min, long max) {
         long[] ar = new long[sz];
@@ -28,7 +28,7 @@ public final class TestUtils {
         return lst;
     }
 
-    // Generates a list of shuffled values where every number in the array
+    // Generates a list of shuffled values where every number in the leetcode.array
     // is in the range of [0, sz)
     public static List<Integer> randomUniformUniqueIntegerList(int sz) {
         List<Integer> lst = new ArrayList<>(sz);

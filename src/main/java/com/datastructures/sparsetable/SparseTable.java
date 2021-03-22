@@ -1,6 +1,6 @@
 /**
  * Implementation of a sparse table which is a data structure that can very quickly query a range on
- * a static array in O(1) for overlap friendly functions (idempotent functions) like min, max and
+ * a static leetcode.array in O(1) for overlap friendly functions (idempotent functions) like min, max and
  * gcd using O(n*logn) memory
  *
  * <p>Main inspiration: https://cp-algorithms.com/data_structures/sparse-table.html
@@ -19,7 +19,7 @@ import java.util.function.BinaryOperator;
 
 public class SparseTable {
 
-    // The number of elements in the original input array.
+    // The number of elements in the original input leetcode.array.
     private int n;
 
     // The maximum power of 2 needed. This value is floor(log2(n))
@@ -193,7 +193,7 @@ public class SparseTable {
     // WARNING: This method can easily produces values that overflow.
     //
     // NOTE: You can achieve a faster time complexity and use less memory with a simple prefix sum
-    // array. This method is here more as a proof of concept than for its usefulness.
+    // leetcode.array. This method is here more as a proof of concept than for its usefulness.
     private long sumQuery(int l, int r) {
         long sum = 0;
         for (int p = log2[r - l + 1]; l <= r; p = log2[r - l + 1]) {

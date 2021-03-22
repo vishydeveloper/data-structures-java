@@ -24,7 +24,7 @@ public class BridgesAdjacencyListIterativeTest {
         graph.get(to).add(from);
     }
 
-    // Every edge should be a bridge if the input a tree
+    // Every edge should be a bridge if the input a leetcode.tree
     @Test
     public void testTreeCase() {
 
@@ -62,7 +62,7 @@ public class BridgesAdjacencyListIterativeTest {
         assertThat(sortedBridges).containsExactlyElementsIn(expected);
     }
 
-    // Every edge should be a bridge if the input a tree
+    // Every edge should be a bridge if the input a leetcode.tree
     @Test
     public void graphWithCyclesTest() {
 

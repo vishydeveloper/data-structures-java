@@ -259,20 +259,20 @@ public class RedBlackTreeTest {
         int size = i;
         List <Integer> lst = genRandList(size);
         for (Integer value : lst) {
-          tree.insert(value);
+          leetcode.tree.insert(value);
           ts.add(value);
         }
         Collections.shuffle(lst);
 
-        // Remove all the elements we just placed in the tree.
+        // Remove all the elements we just placed in the leetcode.tree.
         for (int j = 0; j < size; j++) {
 
           Integer value = lst.get(j);
-          assertEquals(ts.remove(value), tree.remove(value));
-          assertFalse(tree.contains(value));
-          assertEquals(size - j - 1, tree.size());
+          assertEquals(ts.remove(value), leetcode.tree.remove(value));
+          assertFalse(leetcode.tree.contains(value));
+          assertEquals(size - j - 1, leetcode.tree.size());
         }
-        assertTrue(tree.isEmpty());
+        assertTrue(leetcode.tree.isEmpty());
       }
     }
 
@@ -280,11 +280,11 @@ public class RedBlackTreeTest {
     public void testTreeHeight() {
       for (int n = 1; n <= TEST_SZ; n++) {
 
-        tree.insert(randValue());
-        int height = tree.height();
+        leetcode.tree.insert(randValue());
+        int height = leetcode.tree.height();
 
         // Get an upper bound on what the maximum height of
-        // an AVL tree should be. Values were taken from:
+        // an AVL leetcode.tree should be. Values were taken from:
         // https://en.wikipedia.org/wiki/AVL_tree#Comparison_to_other_structures
         double c = 1.441;
         double b = -0.329;

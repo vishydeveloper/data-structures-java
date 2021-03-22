@@ -1,20 +1,20 @@
 /**
- * Abstract class that captures the behavior of a suffix array.
+ * Abstract class that captures the behavior of a suffix leetcode.array.
  */
 package com.datastructures.suffixarray;
 
 public abstract class SuffixArray {
 
-    // Length of the suffix array
+    // Length of the suffix leetcode.array
     protected final int N;
 
     // T is the text
     protected int[] T;
 
-    // The sorted suffix array values.
+    // The sorted suffix leetcode.array values.
     protected int[] sa;
 
-    // Longest Common Prefix array
+    // Longest Common Prefix leetcode.array
     protected int[] lcp;
 
     private boolean constructedSa = false;
@@ -30,26 +30,26 @@ public abstract class SuffixArray {
         return T.length;
     }
 
-    // Returns the suffix array.
+    // Returns the suffix leetcode.array.
     public int[] getSa() {
         buildSuffixArray();
         return sa;
     }
 
-    // Returns the LCP array.
+    // Returns the LCP leetcode.array.
     public int[] getLcpArray() {
         buildLcpArray();
         return lcp;
     }
 
-    // Builds the suffix array by calling the construct() method.
+    // Builds the suffix leetcode.array by calling the construct() method.
     protected void buildSuffixArray() {
         if (constructedSa) return;
         construct();
         constructedSa = true;
     }
 
-    // Builds the LCP array by first creating the SA and then running the kasai algorithm.
+    // Builds the LCP leetcode.array by first creating the SA and then running the kasai algorithm.
     protected void buildLcpArray() {
         if (constructedLcpArray) return;
         buildSuffixArray();
@@ -64,11 +64,11 @@ public abstract class SuffixArray {
         return t;
     }
 
-    // The suffix array construction algorithm is left undefined
+    // The suffix leetcode.array construction algorithm is left undefined
     // as there are multiple ways to do this.
     protected abstract void construct();
 
-    // Use Kasai algorithm to build LCP array
+    // Use Kasai algorithm to build LCP leetcode.array
     // http://www.mi.fu-berlin.de/wiki/pub/ABI/RnaSeqP4/suffix-array.pdf
     private void kasai() {
         lcp = new int[N];

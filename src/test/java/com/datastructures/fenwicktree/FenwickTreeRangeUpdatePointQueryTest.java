@@ -122,12 +122,12 @@ public class FenwickTreeRangeUpdatePointQueryTest {
         }
     }
 
-    // Select a lower bound index for the Fenwick tree
+    // Select a lower bound index for the Fenwick leetcode.tree
     public static int lowBound(int N) {
         return 1 + (int) (Math.random() * N);
     }
 
-    // Select an upper bound index for the Fenwick tree
+    // Select an upper bound index for the Fenwick leetcode.tree
     public static int highBound(int low, int N) {
         return Math.min(N, low + (int) (Math.random() * N));
     }

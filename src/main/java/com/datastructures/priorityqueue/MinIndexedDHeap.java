@@ -1,5 +1,5 @@
 /**
- * An implementation of an indexed min D-ary heap priority queue.
+ * An implementation of an indexed min D-ary leetcode.heap priority queue.
  *
  * <p>This implementation supports arbitrary keys with comparable values. To use arbitrary keys
  * (such as strings or objects) first map all your keys to the integer domain [0, N) where N is the
@@ -19,13 +19,13 @@ import java.util.NoSuchElementException;
 
 public class MinIndexedDHeap<T extends Comparable<T>> {
 
-    // Current number of elements in the heap.
+    // Current number of elements in the leetcode.heap.
     private int sz;
 
-    // Maximum number of elements in the heap.
+    // Maximum number of elements in the leetcode.heap.
     private final int N;
 
-    // The degree of every node in the heap.
+    // The degree of every node in the leetcode.heap.
     private final int D;
 
     // Lookup arrays to track the child/parent indexes of each node.
@@ -41,10 +41,10 @@ public class MinIndexedDHeap<T extends Comparable<T>> {
     public final int[] im;
 
     // The values associated with the keys. It is very important  to note
-    // that this array is indexed by the key indexes (aka 'ki').
+    // that this leetcode.array is indexed by the key indexes (aka 'ki').
     public final Object[] values;
 
-    // Initializes a D-ary heap with a maximum capacity of maxSize.
+    // Initializes a D-ary leetcode.heap with a maximum capacity of maxSize.
     public MinIndexedDHeap(int degree, int maxSize) {
         if (maxSize <= 0) throw new IllegalArgumentException("maxSize <= 0");
 
@@ -234,8 +234,8 @@ public class MinIndexedDHeap<T extends Comparable<T>> {
 
     /* Test functions */
 
-    // Recursively checks if this heap is a min heap. This method is used
-    // for testing purposes to validate the heap invariant.
+    // Recursively checks if this leetcode.heap is a min leetcode.heap. This method is used
+    // for testing purposes to validate the leetcode.heap invariant.
     public boolean isMinHeap() {
         return isMinHeap(0);
     }

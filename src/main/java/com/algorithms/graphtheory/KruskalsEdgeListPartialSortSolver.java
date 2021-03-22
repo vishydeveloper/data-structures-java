@@ -67,7 +67,7 @@ public class KruskalsEdgeListPartialSortSolver {
     private void kruskals() {
         if (solved) return;
 
-        // Heapify operation in constructor transforms list of edges into a binary heap in O(n)
+        // Heapify operation in constructor transforms list of edges into a binary leetcode.heap in O(n)
         PriorityQueue<Edge> pq = new PriorityQueue<>(edges);
         UnionFind uf = new UnionFind(n);
 
@@ -75,7 +75,7 @@ public class KruskalsEdgeListPartialSortSolver {
         mst = new Edge[n - 1];
 
         while (!pq.isEmpty()) {
-            // Use heap to poll the next cheapest edge. Polling avoids the need to sort
+            // Use leetcode.heap to poll the next cheapest edge. Polling avoids the need to sort
             // the edges before loop in the event that the algorithm terminates early.
             Edge edge = pq.poll();
 

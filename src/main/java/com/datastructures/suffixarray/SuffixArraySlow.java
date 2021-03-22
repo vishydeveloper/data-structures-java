@@ -1,5 +1,5 @@
 /**
- * Naive suffix array implementation.
+ * Naive suffix leetcode.array implementation.
  *
  * <p>Time Complexity: O(n^2log(n))
  */
@@ -47,7 +47,7 @@ public class SuffixArraySlow extends SuffixArray {
         super(text);
     }
 
-    // Suffix array construction. This actually takes O(n^2log(n)) time since sorting takes on
+    // Suffix leetcode.array construction. This actually takes O(n^2log(n)) time since sorting takes on
     // average O(nlog(n)) and each String comparison takes O(n).
     @Override
     protected void construct() {

@@ -1,6 +1,6 @@
 /**
- * This file contains an implementation of a Red-Black tree. A RB tree is a special type of binary
- * tree which self balances itself to keep operations logarithmic.
+ * This file contains an implementation of a Red-Black leetcode.tree. A RB leetcode.tree is a special type of binary
+ * leetcode.tree which self balances itself to keep operations logarithmic.
  *
  * <p>Great visualization tool: https://www.cs.usfca.edu/~galles/visualization/RedBlack.html
  */
@@ -28,18 +28,18 @@ public class RedBlackTree<T extends Comparable<T>> implements Iterable<T> {
         }
     }
 
-    // The root node of the RB tree.
+    // The root node of the RB leetcode.tree.
     public Node root;
 
-    // Tracks the number of nodes inside the tree.
+    // Tracks the number of nodes inside the leetcode.tree.
     private int nodeCount = 0;
 
-    // Returns the number of nodes in the tree.
+    // Returns the number of nodes in the leetcode.tree.
     public int size() {
         return nodeCount;
     }
 
-    // Returns whether or not the tree is empty.
+    // Returns whether or not the leetcode.tree is empty.
     public boolean isEmpty() {
         return size() == 0;
     }
@@ -61,7 +61,7 @@ public class RedBlackTree<T extends Comparable<T>> implements Iterable<T> {
                 // Dig into right subtree.
             else if (cmp > 0) node = node.right;
 
-                // Found value in tree.
+                // Found value in leetcode.tree.
             else return true;
         }
 
@@ -104,7 +104,7 @@ public class RedBlackTree<T extends Comparable<T>> implements Iterable<T> {
                 }
                 node = node.right;
 
-                // The value we're trying to insert already exists in the tree.
+                // The value we're trying to insert already exists in the leetcode.tree.
             } else return false;
         }
     }
@@ -123,7 +123,7 @@ public class RedBlackTree<T extends Comparable<T>> implements Iterable<T> {
         Node grandParent = parent.parent;
         if (grandParent == null) return;
 
-        // The red-black tree invariant is already satisfied.
+        // The red-black leetcode.tree invariant is already satisfied.
         if (parent.color == BLACK || node.color == BLACK) return;
 
         boolean nodeIsLeftChild = (parent.left == node);
@@ -258,7 +258,7 @@ public class RedBlackTree<T extends Comparable<T>> implements Iterable<T> {
         return node;
     }
 
-    // Returns as iterator to traverse the tree in order.
+    // Returns as iterator to traverse the leetcode.tree in order.
     @Override
     public java.util.Iterator<T> iterator() {
 
@@ -302,16 +302,16 @@ public class RedBlackTree<T extends Comparable<T>> implements Iterable<T> {
         };
     }
 
-    // Example usage of RB tree:
+    // Example usage of RB leetcode.tree:
     public static void main(String[] args) {
 
         int[] values = {5, 8, 1, -4, 6, -2, 0, 7};
         RedBlackTree<Integer> rbTree = new RedBlackTree<>();
         for (int v : values) rbTree.insert(v);
 
-        System.out.printf("RB tree contains %d: %s\n", 6, rbTree.contains(6));
-        System.out.printf("RB tree contains %d: %s\n", -5, rbTree.contains(-5));
-        System.out.printf("RB tree contains %d: %s\n", 1, rbTree.contains(1));
-        System.out.printf("RB tree contains %d: %s\n", 99, rbTree.contains(99));
+        System.out.printf("RB leetcode.tree contains %d: %s\n", 6, rbTree.contains(6));
+        System.out.printf("RB leetcode.tree contains %d: %s\n", -5, rbTree.contains(-5));
+        System.out.printf("RB leetcode.tree contains %d: %s\n", 1, rbTree.contains(1));
+        System.out.printf("RB leetcode.tree contains %d: %s\n", 99, rbTree.contains(99));
     }
 }

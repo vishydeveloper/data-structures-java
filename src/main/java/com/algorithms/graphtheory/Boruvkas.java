@@ -52,7 +52,7 @@ public class Boruvkas {
         this.m = m;
     }
 
-    // Returns the edges used in finding the minimum spanning tree, or returns
+    // Returns the edges used in finding the minimum spanning leetcode.tree, or returns
     // null if no MST exists.
     public List<Edge> getMst() {
         solve();
@@ -77,7 +77,7 @@ public class Boruvkas {
         int[] cheapest = new int[n];
         Arrays.fill(cheapest, -1);
 
-        // Repeat at most log(n) times or until we have a complete spanning tree.
+        // Repeat at most log(n) times or until we have a complete spanning leetcode.tree.
         // for(int t = 1; t < N && index < n - 1; t = t + t) {
         // for(long t = 1; t <= n && mst.size() != n-1; t = t << 1) {
         for (; mst.size() != n - 1; ) {

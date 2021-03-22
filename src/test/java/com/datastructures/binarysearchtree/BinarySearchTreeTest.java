@@ -110,7 +110,7 @@ public class BinarySearchTreeTest {
         //    B   N Z
         //  A
 
-        // No tree
+        // No leetcode.tree
         assertEquals(tree.height(), 0);
 
         // Layer One
@@ -176,7 +176,7 @@ public class BinarySearchTreeTest {
     @Test
     public void testContains() {
 
-        // Setup tree
+        // Setup leetcode.tree
         BinarySearchTree<Character> tree = new BinarySearchTree<>();
 
         tree.add('B');
@@ -343,7 +343,7 @@ public class BinarySearchTreeTest {
             for (Integer value : lst) tree.add(value);
 
             Collections.shuffle(lst);
-            // Remove all the elements we just placed in the tree
+            // Remove all the elements we just placed in the leetcode.tree
             for (int j = 0; j < size; j++) {
 
                 Integer value = lst.get(j);
@@ -372,7 +372,7 @@ public class BinarySearchTreeTest {
         TestTreeNode testTree = null;
         BinarySearchTree<Integer> tree = new BinarySearchTree<>();
 
-        // Construct Binary Tree and test tree
+        // Construct Binary Tree and test leetcode.tree
         for (Integer value : input) {
             testTree = TestTreeNode.add(testTree, value);
             tree.add(value);

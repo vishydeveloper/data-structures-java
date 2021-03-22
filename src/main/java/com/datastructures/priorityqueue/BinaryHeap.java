@@ -1,5 +1,5 @@
 /**
- * A min priority queue implementation using a binary heap.
+ * A min priority queue implementation using a binary leetcode.heap.
  */
 package com.datastructures.priorityqueue;
 
@@ -9,13 +9,13 @@ import java.util.List;
 
 public class BinaryHeap<T extends Comparable<T>> {
 
-    // The number of elements currently inside the heap
+    // The number of elements currently inside the leetcode.heap
     private int heapSize = 0;
 
-    // The internal capacity of the heap
+    // The internal capacity of the leetcode.heap
     private int heapCapacity = 0;
 
-    // A dynamic list to track the elements inside the heap
+    // A dynamic list to track the elements inside the leetcode.heap
     private List<T> heap = null;
 
     // Construct and initially empty priority queue
@@ -35,7 +35,7 @@ public class BinaryHeap<T extends Comparable<T>> {
         heapSize = heapCapacity = elems.length;
         heap = new ArrayList<T>(heapCapacity);
 
-        // Place all element in heap
+        // Place all element in leetcode.heap
         for (int i = 0; i < heapSize; i++) heap.add(elems[i]);
 
         // Heapify process, O(n)
@@ -53,13 +53,13 @@ public class BinaryHeap<T extends Comparable<T>> {
         return heapSize == 0;
     }
 
-    // Clears everything inside the heap, O(n)
+    // Clears everything inside the leetcode.heap, O(n)
     public void clear() {
         for (int i = 0; i < heapCapacity; i++) heap.set(i, null);
         heapSize = 0;
     }
 
-    // Return the size of the heap
+    // Return the size of the leetcode.heap
     public int size() {
         return heapSize;
     }
@@ -72,12 +72,12 @@ public class BinaryHeap<T extends Comparable<T>> {
         return heap.get(0);
     }
 
-    // Removes the root of the heap, O(log(n))
+    // Removes the root of the leetcode.heap, O(log(n))
     public T poll() {
         return removeAt(0);
     }
 
-    // Test if an element is in heap, O(n)
+    // Test if an element is in leetcode.heap, O(n)
     public boolean contains(T elem) {
         // Linear scan to check containment
         for (int i = 0; i < heapSize; i++) if (heap.get(i).equals(elem)) return true;
@@ -138,11 +138,11 @@ public class BinaryHeap<T extends Comparable<T>> {
             // If right is smaller set smallest to be right
             if (right < heapSize && less(right, left)) smallest = right;
 
-            // Stop if we're outside the bounds of the tree
+            // Stop if we're outside the bounds of the leetcode.tree
             // or stop early if we cannot sink k anymore
             if (left >= heapSize || less(k, smallest)) break;
 
-            // Move down the tree following the smallest node
+            // Move down the leetcode.tree following the smallest node
             swap(smallest, k);
             k = smallest;
         }
@@ -157,7 +157,7 @@ public class BinaryHeap<T extends Comparable<T>> {
         heap.set(j, elem_i);
     }
 
-    // Removes a particular element in the heap, O(n)
+    // Removes a particular element in the leetcode.heap, O(n)
     public boolean remove(T element) {
         if (element == null) return false;
         // Linear removal via search, O(n)
@@ -193,12 +193,12 @@ public class BinaryHeap<T extends Comparable<T>> {
         return removed_data;
     }
 
-    // Recursively checks if this heap is a min heap
+    // Recursively checks if this leetcode.heap is a min leetcode.heap
     // This method is just for testing purposes to make
-    // sure the heap invariant is still being maintained
+    // sure the leetcode.heap invariant is still being maintained
     // Called this method with k=0 to start at the root
     public boolean isMinHeap(int k) {
-        // If we are outside the bounds of the heap return true
+        // If we are outside the bounds of the leetcode.heap return true
         if (k >= heapSize) return true;
 
         int left = 2 * k + 1;
@@ -206,7 +206,7 @@ public class BinaryHeap<T extends Comparable<T>> {
 
         // Make sure that the current node k is less than
         // both of its children left, and right if they exist
-        // return false otherwise to indicate an invalid heap
+        // return false otherwise to indicate an invalid leetcode.heap
         if (left < heapSize && !less(k, left)) return false;
         if (right < heapSize && !less(k, right)) return false;
 

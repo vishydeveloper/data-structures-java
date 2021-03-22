@@ -91,7 +91,7 @@ public class BloomFilterTest {
 
                 for (String s : javaset) assertTrue(set.contains(s));
 
-                // Check that strings that aren't in the string set actually aren't
+                // Check that strings that aren't in the leetcode.string set actually aren't
                 // in the set, the probablity should be low enough that a false positive
                 // should not happen.
                 for (int l = 0; l < 100; l++) {

@@ -21,7 +21,7 @@ public class TreePrinter {
         public String getText();
     }
 
-    // Print a binary tree.
+    // Print a binary leetcode.tree.
     public static String getTreeDisplay(PrintableNode root) {
 
         StringBuilder sb = new StringBuilder();

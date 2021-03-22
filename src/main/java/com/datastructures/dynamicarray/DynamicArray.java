@@ -1,5 +1,5 @@
 /**
- * A generic dynamic array implementation
+ * A generic dynamic leetcode.array implementation
  */
 package com.datastructures.dynamicarray;
 
@@ -7,8 +7,8 @@ package com.datastructures.dynamicarray;
 public class DynamicArray<T> implements Iterable<T> {
 
     private T[] arr;
-    private int len = 0; // length user thinks array is
-    private int capacity = 0; // Actual array size
+    private int len = 0; // length user thinks leetcode.array is
+    private int capacity = 0; // Actual leetcode.array size
 
     public DynamicArray() {
         this(16);
@@ -55,7 +55,7 @@ public class DynamicArray<T> implements Iterable<T> {
         arr[len++] = elem;
     }
 
-    // Removes an element at the specified index in this array.
+    // Removes an element at the specified index in this leetcode.array.
     public T removeAt(int rm_index) {
         if (rm_index >= len || rm_index < 0) throw new IndexOutOfBoundsException();
         T data = arr[rm_index];

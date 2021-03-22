@@ -33,7 +33,7 @@ public class BoardTilingsSolver {
     }
 
     // Works well when there is a low number of (large) tiles and the recursion
-    // depth isn't too deep, otherwise you may encounter a stack overflow.
+    // depth isn't too deep, otherwise you may encounter a leetcode.stack overflow.
     public long recursiveSolution(int n) {
         // Use a Map instead of a List in the hope that the recursion is sparse
         // and that we can save memory by avoiding a large allocation.

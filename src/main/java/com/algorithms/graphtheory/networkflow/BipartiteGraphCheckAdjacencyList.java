@@ -35,7 +35,7 @@ public class BipartiteGraphCheckAdjacencyList {
     }
 
     // If the input graph is bipartite it has a two coloring which can be obtained
-    // through this method. Each index in the returned array is either RED or BLACK
+    // through this method. Each index in the returned leetcode.array is either RED or BLACK
     // indicating which color node i was colored.
     public int[] getTwoColoring() {
         return isBipartite() ? colors : null;

@@ -1,5 +1,5 @@
 /**
- * An implementation of a hashtable using double hashing as a collision resolution technique.
+ * An implementation of a hashtable using double leetcode.hashing as a collision resolution technique.
  */
 package com.datastructures.hashtable;
 

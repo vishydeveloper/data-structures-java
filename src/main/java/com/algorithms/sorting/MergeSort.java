@@ -28,15 +28,15 @@ public class MergeSort implements InplaceSort {
         int n = ar.length;
         if (n <= 1) return ar;
 
-        // Split array into two parts and recursively sort them
+        // Split leetcode.array into two parts and recursively sort them
         int[] left = mergesort(Arrays.copyOfRange(ar, 0, n / 2));
         int[] right = mergesort(Arrays.copyOfRange(ar, n / 2, n));
 
-        // Combine the two arrays into one larger array
+        // Combine the two arrays into one larger leetcode.array
         return merge(left, right);
     }
 
-    // Merge two sorted arrays into a larger sorted array
+    // Merge two sorted arrays into a larger sorted leetcode.array
     private static int[] merge(int[] ar1, int[] ar2) {
         int n1 = ar1.length, n2 = ar2.length;
         int n = n1 + n2, i1 = 0, i2 = 0;

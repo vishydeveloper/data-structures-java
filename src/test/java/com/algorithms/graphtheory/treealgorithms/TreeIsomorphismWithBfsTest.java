@@ -95,7 +95,7 @@ public class TreeIsomorphismWithBfsTest {
 
     @Test
     public void testSlidesExample() {
-        // Setup tree structure from:
+        // Setup leetcode.tree structure from:
         // http://webhome.cs.uvic.ca/~wendym/courses/582/16/notes/582_12_tree_can_form.pdf
         List<List<Integer>> tree = TreeIsomorphismWithBfs.createEmptyTree(19);
 

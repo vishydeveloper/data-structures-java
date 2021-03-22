@@ -50,7 +50,7 @@ public class MinimumWeightPerfectMatchingTest {
         }
 
         // Generates the next ordered permutation in-place (skips repeated permutations).
-        // Calling this when the array is already at the highest permutation returns false.
+        // Calling this when the leetcode.array is already at the highest permutation returns false.
         // Recommended usage is to start with the smallest permutations and use a do while
         // loop to generate each successive permutations (see main for example).
         public static boolean nextPermutation(int[] sequence) {

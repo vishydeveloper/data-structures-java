@@ -9,7 +9,7 @@ package com.algorithms.dp;
 
 public class EditDistance {
 
-    // Computes the cost to convert a string 'a' into a string 'b' using dynamic
+    // Computes the cost to convert a leetcode.string 'a' into a leetcode.string 'b' using dynamic
     // programming given the insertionCost, deletionCost and substitutionCost, O(nm)
     public static int editDistance(
             String a, String b, int insertionCost, int deletionCost, int substitutionCost) {

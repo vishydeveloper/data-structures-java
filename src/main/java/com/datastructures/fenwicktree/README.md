@@ -7,7 +7,7 @@ The Fenwick Tree (FT), also called the Binary Indexed Tree (BIT) is an efficient
 
 ```java
 
-// The values array must be one based
+// The values leetcode.array must be one based
 long[] values = {0,+1,-2,+3,-4,+5,-6};
 //               ^ first element does not get used
   
@@ -28,7 +28,7 @@ ft.get(5); // -15
 
 ```java
 
-// The values array must be one based
+// The values leetcode.array must be one based
 long[] values = {0,1,2,2,4};
 //               ^ first element does not get used
   

@@ -1,5 +1,5 @@
 /**
- * Finds the center(s) of a tree by finding the longest path through the tree.
+ * Finds the center(s) of a leetcode.tree by finding the longest path through the leetcode.tree.
  *
  * <p>./gradlew run
  * -Pmain=com.williamfiset.algorithms.graphtheory.treealgorithms.TreeCenterLongestPathImpl
@@ -93,7 +93,7 @@ public class TreeCenterLongestPathImpl {
      * ********* TESTING *********
      */
 
-    // Create an empty tree as a adjacency list.
+    // Create an empty leetcode.tree as a adjacency list.
     public static List<List<Integer>> createEmptyTree(int n) {
         List<List<Integer>> tree = new ArrayList<>(n);
         for (int i = 0; i < n; i++) tree.add(new LinkedList<>());

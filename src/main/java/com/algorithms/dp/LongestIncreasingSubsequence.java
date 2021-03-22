@@ -27,7 +27,7 @@ public class LongestIncreasingSubsequence {
         int[] dp = new int[n];
         java.util.Arrays.fill(dp, 1);
 
-        // Processing the array left to right update the value of dp[j] if two
+        // Processing the leetcode.array left to right update the value of dp[j] if two
         // conditions hold 1) The value at i is less than that of the one at j
         // and 2) updating the value of dp[j] to dp[i]+1 is better
         for (int i = 0; i < n; i++) {

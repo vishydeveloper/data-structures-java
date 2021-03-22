@@ -47,7 +47,7 @@ public class LazyPrimsAdjacencyList {
         this.graph = graph;
     }
 
-    // Returns the edges used in finding the minimum spanning tree,
+    // Returns the edges used in finding the minimum spanning leetcode.tree,
     // or returns null if no MST exists.
     public Edge[] getMst() {
         solve();
@@ -71,7 +71,7 @@ public class LazyPrimsAdjacencyList {
             }
     }
 
-    // Computes the minimum spanning tree and minimum spanning tree cost.
+    // Computes the minimum spanning leetcode.tree and minimum spanning leetcode.tree cost.
     private void solve() {
         if (solved) return;
         solved = true;

@@ -1,8 +1,8 @@
 /**
- * This file contains an implementation of an integer only stack which is extremely quick and
- * lightweight. In terms of performance it can outperform java.util.ArrayDeque (Java's fastest stack
+ * This file contains an implementation of an integer only leetcode.stack which is extremely quick and
+ * lightweight. In terms of performance it can outperform java.util.ArrayDeque (Java's fastest leetcode.stack
  * implementation) by a factor of 50! See the benchmark test below for proof. However, the downside
- * is you need to know an upper bound on the number of elements that will be inside the stack at any
+ * is you need to know an upper bound on the number of elements that will be inside the leetcode.stack at any
  * given time for it to work correctly.
  */
 package com.datastructures.stack;
@@ -18,27 +18,27 @@ public class IntStack {
         ar = new int[maxSize];
     }
 
-    // Returns the number of elements insize the stack
+    // Returns the number of elements insize the leetcode.stack
     public int size() {
         return pos;
     }
 
-    // Returns true/false on whether the stack is empty
+    // Returns true/false on whether the leetcode.stack is empty
     public boolean isEmpty() {
         return pos == 0;
     }
 
-    // Returns the element at the top of the stack
+    // Returns the element at the top of the leetcode.stack
     public int peek() {
         return ar[pos - 1];
     }
 
-    // Add an element to the top of the stack
+    // Add an element to the top of the leetcode.stack
     public void push(int value) {
         ar[pos++] = value;
     }
 
-    // Make sure you check that the stack is not empty before calling pop!
+    // Make sure you check that the leetcode.stack is not empty before calling pop!
     public int pop() {
         return ar[--pos];
     }

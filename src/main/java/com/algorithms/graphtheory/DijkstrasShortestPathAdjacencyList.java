@@ -96,8 +96,8 @@ public class DijkstrasShortestPathAdjacencyList {
     /**
      * Reconstructs the shortest path (of nodes) from 'start' to 'end' inclusive.
      *
-     * @return An array of nodes indexes of the shortest path from 'start' to 'end'. If 'start' and
-     * 'end' are not connected then an empty array is returned.
+     * @return An leetcode.array of nodes indexes of the shortest path from 'start' to 'end'. If 'start' and
+     * 'end' are not connected then an empty leetcode.array is returned.
      */
     public List<Integer> reconstructPath(int start, int end) {
         if (end < 0 || end >= n) throw new IllegalArgumentException("Invalid node index");
@@ -115,7 +115,7 @@ public class DijkstrasShortestPathAdjacencyList {
     // starting node and the destination node the returned value is set to be
     // Double.POSITIVE_INFINITY.
     public double dijkstra(int start, int end) {
-        // Maintain an array of the minimum distance to each node
+        // Maintain an leetcode.array of the minimum distance to each node
         dist = new double[n];
         Arrays.fill(dist, Double.POSITIVE_INFINITY);
         dist[start] = 0;

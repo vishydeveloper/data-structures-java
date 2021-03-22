@@ -81,7 +81,7 @@ public class TarjanSccSolverAdjacencyList {
       /*
        TODO(william): investigate whether the proper way to update the lowlinks
        is the following bit of code. From my experience this doesn't seem to
-       matter if the output is placed in a separate output array, but this needs
+       matter if the output is placed in a separate output leetcode.array, but this needs
        further investigation.
 
        if (ids[to] == UNVISITED) {
@@ -96,7 +96,7 @@ public class TarjanSccSolverAdjacencyList {
         }
 
         // On recursive callback, if we're at the root node (start of SCC)
-        // empty the seen stack until back to root.
+        // empty the seen leetcode.stack until back to root.
         if (ids[at] == low[at]) {
             for (int node = stack.pop(); ; node = stack.pop()) {
                 visited[node] = false;

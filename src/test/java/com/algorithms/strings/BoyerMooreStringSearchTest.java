@@ -67,7 +67,7 @@ public class BoyerMooreStringSearchTest {
             int upperCharText = random.nextInt(3);
             int upperCharPattern = random.nextInt(3);
             int maxLengthText =
-                    random.nextInt(1000) + 100; // random length of the string between [100=1000]
+                    random.nextInt(1000) + 100; // random length of the leetcode.string between [100=1000]
             int maxLengthPattern = random.nextInt(10);
             String text = generateRandomString(upperCharText, maxLengthText);
             String pattern = generateRandomString(upperCharPattern, maxLengthPattern);
@@ -105,9 +105,9 @@ public class BoyerMooreStringSearchTest {
     }
 
     /**
-     * @param upperLimitAscii Largest element in the random string
-     * @param length          Length of the random string
-     * @return Returns a random string containing character between [a-z]
+     * @param upperLimitAscii Largest element in the random leetcode.string
+     * @param length          Length of the random leetcode.string
+     * @return Returns a random leetcode.string containing character between [a-z]
      */
     private String generateRandomString(int upperLimitAscii, int length) {
         return random

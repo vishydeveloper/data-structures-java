@@ -1,7 +1,7 @@
 /**
  * This file contains an implementation of a Binary Search Tree (BST) Any comparable data is allowed
- * within this tree (numbers, strings, comparable Objects, etc...). Supported operations include
- * adding, removing, height, and containment checks. Furthermore, multiple tree traversal Iterators
+ * within this leetcode.tree (numbers, strings, comparable Objects, etc...). Supported operations include
+ * adding, removing, height, and containment checks. Furthermore, multiple leetcode.tree traversal Iterators
  * are provided including: 1) Preorder traversal 2) Inorder traversal 3) Postorder traversal 4)
  * Levelorder traversal
  */
@@ -12,7 +12,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
     // Tracks the number of nodes in this BST
     private int nodeCount = 0;
 
-    // This BST is a rooted tree so we maintain a handle on the root node
+    // This BST is a rooted leetcode.tree so we maintain a handle on the root node
     private Node root = null;
 
     // Internal node containing node references
@@ -28,26 +28,26 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
     }
 
-    // Check if this binary tree is empty
+    // Check if this binary leetcode.tree is empty
     public boolean isEmpty() {
         return size() == 0;
     }
 
-    // Get the number of nodes in this binary tree
+    // Get the number of nodes in this binary leetcode.tree
     public int size() {
         return nodeCount;
     }
 
-    // Add an element to this binary tree. Returns true
+    // Add an element to this binary leetcode.tree. Returns true
     // if we successfully perform an insertion
     public boolean add(T elem) {
 
         // Check if the value already exists in this
-        // binary tree, if it does ignore adding it
+        // binary leetcode.tree, if it does ignore adding it
         if (contains(elem)) {
             return false;
 
-            // Otherwise add this element to the binary tree
+            // Otherwise add this element to the binary leetcode.tree
         } else {
             root = add(root, elem);
             nodeCount++;
@@ -55,7 +55,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
     }
 
-    // Private method to recursively add a value in the binary tree
+    // Private method to recursively add a value in the binary leetcode.tree
     private Node add(Node node, T elem) {
 
         // Base case: found a leaf node
@@ -74,7 +74,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return node;
     }
 
-    // Remove a value from this binary tree if it exists, O(n)
+    // Remove a value from this binary leetcode.tree if it exists, O(n)
     public boolean remove(T elem) {
 
         // Make sure the node we want to remove
@@ -130,7 +130,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
                 return leftChild;
 
-                // When removing a node from a binary tree with two links the
+                // When removing a node from a binary leetcode.tree with two links the
                 // successor of the node being removed can either be the largest
                 // value in the left subtree or the smallest value in the right
                 // subtree. In this implementation I have decided to find the
@@ -146,7 +146,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
                 // Go into the right subtree and remove the leftmost node we
                 // found and swapped data with. This prevents us from having
-                // two nodes in our tree with the same value.
+                // two nodes in our leetcode.tree with the same value.
                 node.right = remove(node.right, tmp.data);
 
                 // If instead we wanted to find the largest node in the left
@@ -174,12 +174,12 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return node;
     }
 
-    // returns true is the element exists in the tree
+    // returns true is the element exists in the leetcode.tree
     public boolean contains(T elem) {
         return contains(root, elem);
     }
 
-    // private recursive method to find an element in the tree
+    // private recursive method to find an element in the leetcode.tree
     private boolean contains(Node node, T elem) {
 
         // Base case: reached bottom, value not found
@@ -199,19 +199,19 @@ public class BinarySearchTree<T extends Comparable<T>> {
         else return true;
     }
 
-    // Computes the height of the tree, O(n)
+    // Computes the height of the leetcode.tree, O(n)
     public int height() {
         return height(root);
     }
 
-    // Recursive helper method to compute the height of the tree
+    // Recursive helper method to compute the height of the leetcode.tree
     private int height(Node node) {
         if (node == null) return 0;
         return Math.max(height(node.left), height(node.right)) + 1;
     }
 
     // This method returns an iterator for a given TreeTraversalOrder.
-    // The ways in which you can traverse the tree are in four different ways:
+    // The ways in which you can traverse the leetcode.tree are in four different ways:
     // preorder, inorder, postorder and levelorder.
     public java.util.Iterator<T> traverse(TreeTraversalOrder order) {
         switch (order) {
@@ -228,7 +228,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
     }
 
-    // Returns as iterator to traverse the tree in pre order
+    // Returns as iterator to traverse the leetcode.tree in pre order
     private java.util.Iterator<T> preOrderTraversal() {
 
         final int expectedNodeCount = nodeCount;
@@ -258,7 +258,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         };
     }
 
-    // Returns as iterator to traverse the tree in order
+    // Returns as iterator to traverse the leetcode.tree in order
     private java.util.Iterator<T> inOrderTraversal() {
 
         final int expectedNodeCount = nodeCount;
@@ -303,7 +303,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         };
     }
 
-    // Returns as iterator to traverse the tree in post order
+    // Returns as iterator to traverse the leetcode.tree in post order
     private java.util.Iterator<T> postOrderTraversal() {
         final int expectedNodeCount = nodeCount;
         final java.util.Stack<Node> stack1 = new java.util.Stack<>();
@@ -337,7 +337,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         };
     }
 
-    // Returns as iterator to traverse the tree in level order
+    // Returns as iterator to traverse the leetcode.tree in level order
     private java.util.Iterator<T> levelOrderTraversal() {
 
         final int expectedNodeCount = nodeCount;

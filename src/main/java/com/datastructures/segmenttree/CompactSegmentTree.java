@@ -1,5 +1,5 @@
 /**
- * A compact array based segment tree implementation. This segment tree supports point updates and
+ * A compact leetcode.array based segment leetcode.tree implementation. This segment leetcode.tree supports point updates and
  * range queries.
  *
  * @author Al.Cash & William Fiset, william.alexandre.fiset@gmail.com
@@ -10,10 +10,10 @@ public class CompactSegmentTree {
     private int N;
 
     // Let UNIQUE be a value which does NOT
-    // and will not appear in the segment tree
+    // and will not appear in the segment leetcode.tree
     private long UNIQUE = 8123572096793136074L;
 
-    // Segment tree values
+    // Segment leetcode.tree values
     private long[] tree;
 
     public CompactSegmentTree(int size) {
@@ -26,7 +26,7 @@ public class CompactSegmentTree {
         for (int i = 0; i < N; i++) modify(i, values[i]);
     }
 
-    // This is the segment tree function we are using for queries.
+    // This is the segment leetcode.tree function we are using for queries.
     // The function must be an associative function, meaning
     // the following property must hold: f(f(a,b),c) = f(a,f(b,c)).
     // Common associative functions used with segment trees

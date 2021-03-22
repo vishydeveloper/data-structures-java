@@ -60,10 +60,10 @@ public class AStar_GridHeuristic {
             double[] X, double[] Y, Map<Integer, List<Edge>> graph, int start, int end, int n) {
 
         // In the event that you wish to rebuild the shortest path
-        // you can do so using the prev array and starting at some node 'end'
+        // you can do so using the prev leetcode.array and starting at some node 'end'
         // and finding the previous node using prev[end] and the previous node
         // after that prev[prev[end]] etc... working all the way back until
-        // the index of start is found. Simply uncomment where the prev array is used.
+        // the index of start is found. Simply uncomment where the prev leetcode.array is used.
         // int[] prev = new int[n];
 
         double[] G = new double[n];
@@ -217,7 +217,7 @@ public class AStar_GridHeuristic {
     // Double.POSITIVE_INFINITY.
     public static double dijkstra(Map<Integer, List<Edge>> graph, int start, int end, int n) {
 
-        // Maintain an array of the minimum distance to each node
+        // Maintain an leetcode.array of the minimum distance to each node
         double[] dists = new double[n];
         Arrays.fill(dists, Double.POSITIVE_INFINITY);
         dists[start] = 0;
@@ -230,10 +230,10 @@ public class AStar_GridHeuristic {
         boolean[] visited = new boolean[n];
 
         // In the event that you wish to rebuild the shortest path
-        // you can do so using the prev array and starting at some node 'end'
+        // you can do so using the prev leetcode.array and starting at some node 'end'
         // and finding the previous node using prev[end] and the previous node
         // after that prev[prev[end]] etc... working all the way back until
-        // the index of start is found. Simply uncomment where the prev array is used.
+        // the index of start is found. Simply uncomment where the prev leetcode.array is used.
         // int[] prev = new int[n];
 
         while (!pq.isEmpty()) {

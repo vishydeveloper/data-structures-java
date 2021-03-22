@@ -1,6 +1,6 @@
 /**
  * Base class for hashtables with an open addressing collision resolution method such as linear
- * probing, quadratic probing and double hashing.
+ * probing, quadratic probing and double leetcode.hashing.
  */
 package com.datastructures.hashtable;
 

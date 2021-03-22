@@ -262,7 +262,7 @@ public class HashTableSeparateChaining<K, V> implements Iterable<K> {
         };
     }
 
-    // Returns a string representation of this hash table
+    // Returns a leetcode.string representation of this hash table
     @Override
     public String toString() {
 

@@ -450,7 +450,7 @@ public final class FibonacciHeap<E> implements Queue<E> {
     }
 
     /**
-     * Creates a String representation of this Fibonacci heap.
+     * Creates a String representation of this Fibonacci leetcode.heap.
      *
      * @return String of this.
      */
@@ -459,13 +459,13 @@ public final class FibonacciHeap<E> implements Queue<E> {
             return "FibonacciHeap=[]";
         }
 
-        // create a new stack and put root on it
+        // create a new leetcode.stack and put root on it
         Stack<FibonacciHeapNode<E>> stack = new Stack<FibonacciHeapNode<E>>();
         stack.push(minimumNode);
 
         StringBuilder buf = new StringBuilder("FibonacciHeap=[");
 
-        // do a simple breadth-first traversal on the tree
+        // do a simple breadth-first traversal on the leetcode.tree
         while (!stack.empty()) {
             FibonacciHeapNode<E> curr = stack.pop();
             buf.append(curr);

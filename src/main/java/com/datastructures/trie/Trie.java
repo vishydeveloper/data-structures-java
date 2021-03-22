@@ -23,7 +23,7 @@ public class Trie {
         }
     }
 
-    // Returns true if the string being inserted
+    // Returns true if the leetcode.string being inserted
     // contains a prefix already in the trie
     public boolean insert(String key, int numInserts) {
 
@@ -41,7 +41,7 @@ public class Trie {
             char ch = key.charAt(i);
             Node nextNode = node.children.get(ch);
 
-            // The next character in this string does not yet exist in trie
+            // The next character in this leetcode.string does not yet exist in trie
             if (nextNode == null) {
 
                 nextNode = new Node(ch);
@@ -63,7 +63,7 @@ public class Trie {
         return is_prefix || !created_new_node;
     }
 
-    // Returns true if the string being inserted
+    // Returns true if the leetcode.string being inserted
     // contains a prefix already in the trie
     public boolean insert(String key) {
         return insert(key, 1);
@@ -106,7 +106,7 @@ public class Trie {
         return delete(key, 1);
     }
 
-    // Returns true if this string is contained inside the trie
+    // Returns true if this leetcode.string is contained inside the trie
     public boolean contains(String key) {
         return count(key) != 0;
     }
@@ -119,7 +119,7 @@ public class Trie {
         Node node = root;
 
         // Dig down into trie until we reach the bottom or stop
-        // early because the string we're looking for doesn't exist
+        // early because the leetcode.string we're looking for doesn't exist
         for (int i = 0; i < key.length(); i++) {
             char ch = key.charAt(i);
             if (node == null) return 0;

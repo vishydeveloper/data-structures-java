@@ -1,5 +1,5 @@
 /**
- * An implementation of a iterative DFS with an adjacency list using a custom stack for extra speed.
+ * An implementation of a iterative DFS with an adjacency list using a custom leetcode.stack for extra speed.
  * Time Complexity: O(V + E)
  *
  * @author William Fiset, william.alexandre.fiset@gmail.com
@@ -8,11 +8,11 @@ package com.algorithms.graphtheory;
 
 import java.util.*;
 
-// This file contains an implementation of an integer only stack which is
+// This file contains an implementation of an integer only leetcode.stack which is
 // extremely quick and lightweight. In terms of performance it can outperform
-// java.util.ArrayDeque (Java's fastest stack implementation) by a factor of 50!
+// java.util.ArrayDeque (Java's fastest leetcode.stack implementation) by a factor of 50!
 // However, the downside is you need to know an upper bound on the number of
-// elements that will be inside the stack at any given time for it to work correctly.
+// elements that will be inside the leetcode.stack at any given time for it to work correctly.
 class IntStack {
 
     private int[] ar;
@@ -28,17 +28,17 @@ class IntStack {
         return pos == 0;
     }
 
-    // Returns the element at the top of the stack
+    // Returns the element at the top of the leetcode.stack
     public int peek() {
         return ar[pos - 1];
     }
 
-    // Add an element to the top of the stack
+    // Add an element to the top of the leetcode.stack
     public void push(int value) {
         ar[pos++] = value;
     }
 
-    // Make sure you check that the stack is not empty before calling pop!
+    // Make sure you check that the leetcode.stack is not empty before calling pop!
     public int pop() {
         return ar[--pos];
     }

@@ -36,14 +36,14 @@ public class SteinerTree {
         // Find the shortest distance between all pairs of nodes
         floydWarshall(distances);
 
-        // This array is indexed using a mask (which says which terminal nodes are
+        // This leetcode.array is indexed using a mask (which says which terminal nodes are
         // connected so far) and node we are currently at (our root)
         double[][] dp = new double[1 << t][v];
         for (int i = 0; i < dp.length; i++) {
             Arrays.fill(dp[i], Double.POSITIVE_INFINITY);
         }
 
-        // Initialize the dynamic programming array with our base cases (starting with
+        // Initialize the dynamic programming leetcode.array with our base cases (starting with
         // each terminal node and going to all other nodes)
         for (int mask = 0; mask < t; mask++) {
             for (int j = 0; j < v; j++) {

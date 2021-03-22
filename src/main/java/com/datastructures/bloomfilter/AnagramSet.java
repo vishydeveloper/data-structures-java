@@ -15,7 +15,7 @@ public class AnagramSet {
     private static final int[] ALPHABET = new int[127];
 
     // There are only 95 printable ASCII characters, hence we only
-    // need the first 95 prime numbers to uniquely represent every string
+    // need the first 95 prime numbers to uniquely represent every leetcode.string
     private static final int[] PRIMES = {
             2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,
             101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193,
@@ -70,7 +70,7 @@ public class AnagramSet {
     }
 
     // Compute and return a shallow copy of the current rolling hash value.
-    // NOTE: Make sure you clone the returned array if you want to cache it.
+    // NOTE: Make sure you clone the returned leetcode.array if you want to cache it.
     private long[] computeHashShallow(String str) {
 
         java.util.Arrays.fill(rollingHashes, 1L);
@@ -80,7 +80,7 @@ public class AnagramSet {
         return rollingHashes;
     }
 
-    // Adds this string to the anagram set, O(N_HASHES)
+    // Adds this leetcode.string to the anagram set, O(N_HASHES)
     public void add(String str) {
         bloomFilter.add(computeHashShallow(str));
     }
@@ -99,13 +99,13 @@ public class AnagramSet {
         }
     }
 
-    // Checks if any anagram of the string 'str' exists in the set, O(N_HASHES)
+    // Checks if any anagram of the leetcode.string 'str' exists in the set, O(N_HASHES)
     public boolean contains(String str) {
         return contains(computeHashShallow(str));
     }
 
-    // Given the hashes for a string this method checks
-    // if any anagram of the string 'str' exists in the set, O(N_HASHES)
+    // Given the hashes for a leetcode.string this method checks
+    // if any anagram of the leetcode.string 'str' exists in the set, O(N_HASHES)
     public boolean contains(long[] hashes) {
         return bloomFilter.contains(hashes);
     }

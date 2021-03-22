@@ -142,7 +142,7 @@ public class AVLTreeTest {
             int height = tree.height();
 
             // Get an upper bound on what the maximum height of
-            // an AVL tree should be. Values were taken from:
+            // an AVL leetcode.tree should be. Values were taken from:
             // https://en.wikipedia.org/wiki/AVL_tree#Comparison_to_other_structures
             double c = 1.441;
             double b = -0.329;
@@ -165,7 +165,7 @@ public class AVLTreeTest {
             }
             Collections.shuffle(lst);
 
-            // Remove all the elements we just placed in the tree.
+            // Remove all the elements we just placed in the leetcode.tree.
             for (int j = 0; j < size; j++) {
 
                 Integer value = lst.get(j);

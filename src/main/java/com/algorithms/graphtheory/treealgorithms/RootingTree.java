@@ -1,6 +1,6 @@
 /**
  * Often when working with trees we are given them as a graph with undirected edges, however
- * sometimes a better representation is a rooted tree.
+ * sometimes a better representation is a rooted leetcode.tree.
  *
  * <p>Time Complexity: O(V+E)
  *
@@ -66,7 +66,7 @@ public class RootingTree {
         return buildTree(graph, root);
     }
 
-    // Do dfs to construct rooted tree.
+    // Do dfs to construct rooted leetcode.tree.
     private static TreeNode buildTree(List<List<Integer>> graph, TreeNode node) {
         for (int childId : graph.get(node.id())) {
             // Ignore adding an edge pointing back to parent.
@@ -110,7 +110,7 @@ public class RootingTree {
         addUndirectedEdge(graph, 6, 7);
         addUndirectedEdge(graph, 6, 8);
 
-        // Rooted at 6 the tree should look like:
+        // Rooted at 6 the leetcode.tree should look like:
         //           6
         //      2    7     8
         //    1   3
@@ -133,7 +133,7 @@ public class RootingTree {
                         + ", "
                         + root.children.get(0).children.get(1).children);
 
-        // Rooted at 3 the tree should look like:
+        // Rooted at 3 the leetcode.tree should look like:
         //               3
         //     2         4        5
         //  6     1

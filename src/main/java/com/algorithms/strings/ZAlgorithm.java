@@ -5,10 +5,10 @@ import static java.util.Objects.isNull;
 public class ZAlgorithm {
 
     /**
-     * Calculates the Z-array of a given string
+     * Calculates the Z-leetcode.array of a given leetcode.string
      *
-     * @param text the string on which Z-array is computed
-     * @return An int-array which is the Z-array of text
+     * @param text the leetcode.string on which Z-leetcode.array is computed
+     * @return An int-leetcode.array which is the Z-leetcode.array of text
      */
     public int[] calculateZ(String text) {
         if (isNull(text)) {

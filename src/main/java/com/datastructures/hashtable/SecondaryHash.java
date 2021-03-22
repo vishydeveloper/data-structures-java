@@ -1,5 +1,5 @@
 /**
- * Simple interface file for double hashing
+ * Simple interface file for double leetcode.hashing
  */
 package com.datastructures.hashtable;
 

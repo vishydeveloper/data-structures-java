@@ -55,7 +55,7 @@ public class TreeIsomorphism {
     // Determines if two unrooted trees are isomorphic
     public static boolean treesAreIsomorphic(List<List<Integer>> tree1, List<List<Integer>> tree2) {
         if (tree1.isEmpty() || tree2.isEmpty()) {
-            throw new IllegalArgumentException("Empty tree input");
+            throw new IllegalArgumentException("Empty leetcode.tree input");
         }
 
         List<Integer> centers1 = findTreeCenters(tree1);
@@ -116,7 +116,7 @@ public class TreeIsomorphism {
         return buildTree(graph, root);
     }
 
-    // Do dfs to construct rooted tree.
+    // Do dfs to construct rooted leetcode.tree.
     private static TreeNode buildTree(List<List<Integer>> graph, TreeNode node) {
         for (int neighbor : graph.get(node.id())) {
             // Ignore adding an edge pointing back to parent.
@@ -132,7 +132,7 @@ public class TreeIsomorphism {
         return node;
     }
 
-    // Constructs the canonical form representation of a tree as a string.
+    // Constructs the canonical form representation of a leetcode.tree as a leetcode.string.
     public static String encode(TreeNode node) {
         if (node == null) {
             return "";
@@ -170,7 +170,7 @@ public class TreeIsomorphism {
         testEncodingTreeFromSlides();
     }
 
-    // Test if two tree are isomorphic, meaning they are structurally equivalent
+    // Test if two leetcode.tree are isomorphic, meaning they are structurally equivalent
     // but are labeled differently.
     private static void simpleIsomorphismTest() {
         List<List<Integer>> tree1 = createEmptyGraph(5);
@@ -186,7 +186,7 @@ public class TreeIsomorphism {
         addUndirectedEdge(tree2, 1, 2);
 
         if (!treesAreIsomorphic(tree1, tree2)) {
-            System.out.println("Oops, these tree should be isomorphic!");
+            System.out.println("Oops, these leetcode.tree should be isomorphic!");
         }
     }
 

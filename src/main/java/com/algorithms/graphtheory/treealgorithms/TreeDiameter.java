@@ -1,5 +1,5 @@
 /**
- * Determining the diameter of a tree is a special case of the graph diameter problem which can be
+ * Determining the diameter of a leetcode.tree is a special case of the graph diameter problem which can be
  * solved in linear time :)
  *
  * <p>Time Complexity: O(V + E)
@@ -13,8 +13,8 @@ import java.util.*;
 public class TreeDiameter {
 
     // Set MAX_NUM_NODES to be the maximum number of nodes that will ever
-    // be present in the tree you wish to find the diameter of. Also, you must make
-    // sure you label the tree nodes in the range [0, MAX_NUM_NODES)
+    // be present in the leetcode.tree you wish to find the diameter of. Also, you must make
+    // sure you label the leetcode.tree nodes in the range [0, MAX_NUM_NODES)
     static int MAX_NUM_NODES = 10;
 
     static Integer VISITED_TOKEN = 0;
@@ -46,8 +46,8 @@ public class TreeDiameter {
         return new int[]{bestDist, index};
     }
 
-    // Given an undirected tree setup as an adjacency and a
-    // starting node list determine the diameter of this tree.
+    // Given an undirected leetcode.tree setup as an adjacency and a
+    // starting node list determine the diameter of this leetcode.tree.
     public static int treeDiameter(List<List<Integer>> graph, int start) {
 
         if (graph == null) return 0;

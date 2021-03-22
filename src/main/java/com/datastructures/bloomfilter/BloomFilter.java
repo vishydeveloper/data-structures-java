@@ -9,7 +9,7 @@ public class BloomFilter {
     // to the number of hash functions for this bloom filter
     private final int N_SETS;
 
-    // A 2D array containing the bitsets
+    // A 2D leetcode.array containing the bitsets
     private final long[][] bitsets;
 
     // Tracks the size of the bitsets in this bloom filter

@@ -74,7 +74,7 @@ public class CircleCircleIntersectionArea {
 
     // Finds the intersection points of two circles. If the smaller circle is contained
     // within the larger one this method returns null. If there is no intersection point
-    // an empty array is returned. If there is a unique intersection point that point alone
+    // an empty leetcode.array is returned. If there is a unique intersection point that point alone
     // is returned, otherwise two distinct points are returned where the intersection is.
     public static Point2D[] circleCircleIntersection(Point2D c1, double r1, Point2D c2, double r2) {
 

@@ -1,5 +1,5 @@
 /**
- * Suffix array construction implementation.
+ * Suffix leetcode.array construction implementation.
  *
  * <p>Time Complexity: O(nlog(n))
  */

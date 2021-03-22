@@ -1,11 +1,11 @@
 /**
  * The graph isomorphism problem for general graphs can be quite difficult, however there exists an
- * elegant solution to uniquely encode a graph if it is a tree. Here is a brilliant explanation with
+ * elegant solution to uniquely encode a graph if it is a leetcode.tree. Here is a brilliant explanation with
  * animations:
  *
  * <p>http://webhome.cs.uvic.ca/~wendym/courses/582/16/notes/582_12_tree_can_form.pdf
  *
- * <p>This implementation uses a breadth first search on an undirected graph to generate the tree's
+ * <p>This implementation uses a breadth first search on an undirected graph to generate the leetcode.tree's
  * canonical encoding.
  *
  * <p>Tested code against: https://uva.onlinejudge.org/external/124/p12489.pdf
@@ -57,7 +57,7 @@ public class TreeIsomorphismWithBfs {
         return leaves;
     }
 
-    // Encodes a tree as a string such that any isomorphic tree
+    // Encodes a leetcode.tree as a leetcode.string such that any isomorphic leetcode.tree
     // also has the same encoding.
     // TODO(william): make this method private and test only with the treesAreIsomorphic method
     public static String encodeTree(List<List<Integer>> tree) {
@@ -149,7 +149,7 @@ public class TreeIsomorphismWithBfs {
     /* Example usage */
 
     public static void main(String[] args) {
-        // Test if two tree are isomorphic, meaning they are structurally equivalent
+        // Test if two leetcode.tree are isomorphic, meaning they are structurally equivalent
         // but are labeled differently.
         List<List<Integer>> tree1 = createEmptyTree(5);
         List<List<Integer>> tree2 = createEmptyTree(5);

@@ -1,7 +1,7 @@
 /**
- * Finds the longest repeated substring(s) of a string.
+ * Finds the longest repeated substring(s) of a leetcode.string.
  *
- * <p>Time complexity: O(nlogn), bounded by suffix array construction
+ * <p>Time complexity: O(nlogn), bounded by suffix leetcode.array construction
  *
  * @author William Fiset, william.alexandre.fiset@gmail.com
  */
@@ -82,7 +82,7 @@ public class LongestRepeatedSubstring {
             }
         }
 
-        // Use Kasai algorithm to build LCP array
+        // Use Kasai algorithm to build LCP leetcode.array
         private void kasai() {
             lcp = new int[N];
             int[] inv = new int[N];
@@ -97,7 +97,7 @@ public class LongestRepeatedSubstring {
             }
         }
 
-        // Finds the LRS(s) (Longest Repeated Substring) that occurs in a string.
+        // Finds the LRS(s) (Longest Repeated Substring) that occurs in a leetcode.string.
         // Traditionally we are only interested in substrings that appear at
         // least twice, so this method returns an empty set if this is not the case.
         // @return an ordered set of longest repeated substrings

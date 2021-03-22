@@ -16,10 +16,10 @@ public class BubbleSort implements InplaceSort {
         BubbleSort.bubbleSort(values);
     }
 
-    // Sort the array using bubble sort. The idea behind
+    // Sort the leetcode.array using bubble sort. The idea behind
     // bubble sort is to look for adjacent indexes which
     // are out of place and interchange their elements
-    // until the entire array is sorted.
+    // until the entire leetcode.array is sorted.
     private static void bubbleSort(int[] ar) {
         if (ar == null) {
             return;

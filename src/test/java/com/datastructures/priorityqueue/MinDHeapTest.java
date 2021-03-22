@@ -35,7 +35,7 @@ public class MinDHeapTest {
         MinDHeap<Integer> q = new MinDHeap<>(3, 30);
         Integer[] nums = {3, 2, 5, 6, 7, 9, 4, 8, 1};
 
-        // Try manually creating heap
+        // Try manually creating leetcode.heap
         for (int n : nums) q.add(n);
         for (int i = 1; i <= 9; i++) assertTrue(i == q.poll());
     }

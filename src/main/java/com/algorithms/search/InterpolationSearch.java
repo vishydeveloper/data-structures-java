@@ -32,7 +32,7 @@ public class InterpolationSearch {
 
         int[] values = {10, 20, 25, 35, 50, 70, 85, 100, 110, 120, 125};
 
-        // Since 25 exists in the values array the interpolation search
+        // Since 25 exists in the values leetcode.array the interpolation search
         // returns that it has found 25 at the index 2
         System.out.println(interpolationSearch(values, 25));
 

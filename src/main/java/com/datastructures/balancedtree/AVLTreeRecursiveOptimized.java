@@ -1,5 +1,5 @@
 /**
- * This file contains an implementation of an AVL tree. An AVL tree is a special type of binary tree
+ * This file contains an implementation of an AVL leetcode.tree. An AVL leetcode.tree is a special type of binary leetcode.tree
  * which self balances itself to keep operations logarithmic.
  */
 package com.datastructures.balancedtree;
@@ -14,7 +14,7 @@ public class AVLTreeRecursiveOptimized<T extends Comparable<T>> implements Itera
         // The value/data contained within the node.
         public T value;
 
-        // The height of this node in the tree.
+        // The height of this node in the leetcode.tree.
         public int height;
 
         // The left and the right children of this node.
@@ -25,37 +25,37 @@ public class AVLTreeRecursiveOptimized<T extends Comparable<T>> implements Itera
         }
     }
 
-    // The root node of the AVL tree.
+    // The root node of the AVL leetcode.tree.
     public Node root;
 
-    // Tracks the number of nodes inside the tree.
+    // Tracks the number of nodes inside the leetcode.tree.
     private int nodeCount = 0;
 
     // Special token value used as an alternative to returning 'null'.
     // The TOKEN is used to indicate special return value signals. For example,
     // we can return the TOKEN instead of null when we're inserting a new item
-    // and discover the value we were inserting already exists in the tree.
+    // and discover the value we were inserting already exists in the leetcode.tree.
     private Node TOKEN = new Node(null);
 
-    // The height of a rooted tree is the number of edges between the tree's
-    // root and its furthest leaf. This means that a tree containing a single
+    // The height of a rooted leetcode.tree is the number of edges between the leetcode.tree's
+    // root and its furthest leaf. This means that a leetcode.tree containing a single
     // node has a height of 0.
     public int height() {
         if (root == null) return 0;
         return root.height;
     }
 
-    // Returns the number of nodes in the tree.
+    // Returns the number of nodes in the leetcode.tree.
     public int size() {
         return nodeCount;
     }
 
-    // Returns whether or not the tree is empty.
+    // Returns whether or not the leetcode.tree is empty.
     public boolean isEmpty() {
         return size() == 0;
     }
 
-    // Return true/false depending on whether a value exists in the tree.
+    // Return true/false depending on whether a value exists in the leetcode.tree.
     public boolean contains(T value) {
 
         Node node = root;
@@ -71,7 +71,7 @@ public class AVLTreeRecursiveOptimized<T extends Comparable<T>> implements Itera
         return false;
     }
 
-    // Insert/add a value to the AVL tree. The value must not be null, O(log(n))
+    // Insert/add a value to the AVL leetcode.tree. The value must not be null, O(log(n))
     public boolean insert(T value) {
         if (value == null) return false;
         Node newRoot = insert(root, value);
@@ -83,8 +83,8 @@ public class AVLTreeRecursiveOptimized<T extends Comparable<T>> implements Itera
         return insertedNode;
     }
 
-    // Inserts a value inside the AVL tree. This method returns 'TOKEN' if
-    // the value we tried to insert was already inside the tree, otherwise
+    // Inserts a value inside the AVL leetcode.tree. This method returns 'TOKEN' if
+    // the value we tried to insert was already inside the leetcode.tree, otherwise
     // the new (or old) root node is returned.
     private Node insert(Node node, T value) {
 
@@ -106,13 +106,13 @@ public class AVLTreeRecursiveOptimized<T extends Comparable<T>> implements Itera
             if (newRightNode == TOKEN) return TOKEN;
             node.right = newRightNode;
 
-            // Return 'TOKEN' to indicate a duplicate value in the tree.
+            // Return 'TOKEN' to indicate a duplicate value in the leetcode.tree.
         } else return TOKEN;
 
         // Update balance factor and height values.
         update(node);
 
-        // Re-balance tree.
+        // Re-balance leetcode.tree.
         return balance(node);
     }
 
@@ -197,7 +197,7 @@ public class AVLTreeRecursiveOptimized<T extends Comparable<T>> implements Itera
         return newParent;
     }
 
-    // Remove a value from this binary tree if it exists, O(log(n))
+    // Remove a value from this binary leetcode.tree if it exists, O(log(n))
     public boolean remove(T elem) {
 
         Node newRoot = remove(root, elem);
@@ -212,8 +212,8 @@ public class AVLTreeRecursiveOptimized<T extends Comparable<T>> implements Itera
         return false;
     }
 
-    // Removes a value from the AVL tree. If the value we're trying to remove
-    // does not exist in the tree then the 'TOKEN' value is returned. Otherwise,
+    // Removes a value from the AVL leetcode.tree. If the value we're trying to remove
+    // does not exist in the leetcode.tree then the 'TOKEN' value is returned. Otherwise,
     // the new (or old) root node is returned.
     private Node remove(Node node, T elem) {
 
@@ -251,7 +251,7 @@ public class AVLTreeRecursiveOptimized<T extends Comparable<T>> implements Itera
             } else if (node.right == null) {
                 return node.left;
 
-                // When removing a node from a binary tree with two links the
+                // When removing a node from a binary leetcode.tree with two links the
                 // successor of the node being removed can either be the largest
                 // value in the left subtree or the smallest value in the right
                 // subtree. As a heuristic, I will remove from the subtree with
@@ -278,7 +278,7 @@ public class AVLTreeRecursiveOptimized<T extends Comparable<T>> implements Itera
 
                     // Go into the right subtree and remove the leftmost node we
                     // found and swapped data with. This prevents us from having
-                    // two nodes in our tree with the same value.
+                    // two nodes in our leetcode.tree with the same value.
                     Node replacement = remove(node.right, successorValue);
                     if (replacement == TOKEN) return TOKEN;
                     node.right = replacement;
@@ -289,7 +289,7 @@ public class AVLTreeRecursiveOptimized<T extends Comparable<T>> implements Itera
         // Update balance factor and height values.
         update(node);
 
-        // Re-balance tree.
+        // Re-balance leetcode.tree.
         return balance(node);
     }
 
@@ -305,7 +305,7 @@ public class AVLTreeRecursiveOptimized<T extends Comparable<T>> implements Itera
         return node.value;
     }
 
-    // Returns as iterator to traverse the tree in order.
+    // Returns as iterator to traverse the leetcode.tree in order.
     public java.util.Iterator<T> iterator() {
 
         final int expectedNodeCount = nodeCount;

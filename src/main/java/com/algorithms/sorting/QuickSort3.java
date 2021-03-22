@@ -1,7 +1,7 @@
 /**
  * QuickSort3 or Dutch National Flag algorithm is similar to the QuickSort algorithm but has an
  * improved partitioning algorithm. QuickSort is quite slow in the case where very few unique
- * elements exist in the array so the QuickSort3 algorithm is used at that time.
+ * elements exist in the leetcode.array so the QuickSort3 algorithm is used at that time.
  *
  * <p>Run with:
  *
@@ -26,7 +26,7 @@ public class QuickSort3 implements InplaceSort {
         QuickSort3.randomizedQuickSort(ar, 0, ar.length - 1);
     }
 
-    // partiton array in such a way that all the elements whose value is equal to
+    // partiton leetcode.array in such a way that all the elements whose value is equal to
     // pivot are grouped together
     private static int[] partition3(int[] a, int l, int r) {
         int j, k;

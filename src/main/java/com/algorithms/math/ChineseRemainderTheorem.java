@@ -94,7 +94,7 @@ public class ChineseRemainderTheorem {
             }
         }
 
-        // Put result into an array
+        // Put result into an leetcode.array
         long[][] res = new long[2][aNew.size()];
         for (int i = 0; i < aNew.size(); i++) {
             res[0][i] = aNew.get(i);

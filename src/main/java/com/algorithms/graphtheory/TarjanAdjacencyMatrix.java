@@ -101,7 +101,7 @@ class TarjanAdjacencyMatrix {
             count++;
         }
 
-        // Returns the id array with the strongly connected components.
+        // Returns the id leetcode.array with the strongly connected components.
         // If id[i] == id[j] then nodes i and j are part of the same strongly connected component.
         public int[] getStronglyConnectedComponents() {
             return id.clone();

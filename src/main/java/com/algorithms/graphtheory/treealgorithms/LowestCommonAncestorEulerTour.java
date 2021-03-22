@@ -1,6 +1,6 @@
 /**
- * Implementation of finding the Lowest Common Ancestor (LCA) of a tree. This impl first finds an
- * Euler tour from the root node which visits all the nodes in the tree. The node height values
+ * Implementation of finding the Lowest Common Ancestor (LCA) of a leetcode.tree. This impl first finds an
+ * Euler tour from the root node which visits all the nodes in the leetcode.tree. The node height values
  * obtained from the Euler tour can then be used in combination with a sparse table to find the LCA
  * in O(1).
  *
@@ -85,7 +85,7 @@ public class LowestCommonAncestorEulerTour {
     }
 
     public static class TreeNode {
-        // Number of nodes in the subtree. Computed when tree is built.
+        // Number of nodes in the subtree. Computed when leetcode.tree is built.
         private int n;
 
         private int index;
@@ -140,7 +140,7 @@ public class LowestCommonAncestorEulerTour {
             return rootedTree;
         }
 
-        // Do dfs to construct rooted tree.
+        // Do dfs to construct rooted leetcode.tree.
         private static TreeNode buildTree(List<List<Integer>> graph, TreeNode node) {
             int subtreeNodeCount = 1;
             for (int neighbor : graph.get(node.index())) {
@@ -194,8 +194,8 @@ public class LowestCommonAncestorEulerTour {
         // Do depth first search to construct Euler tour.
         dfs(root, /*depth=*/ 0);
 
-        // Initialize and build sparse table on the `nodeDepth` array which will
-        // allow us to index into the `nodeOrder` array and return the LCA.
+        // Initialize and build sparse table on the `nodeDepth` leetcode.array which will
+        // allow us to index into the `nodeOrder` leetcode.array and return the LCA.
         sparseTable = new MinSparseTable(nodeDepth);
     }
 
@@ -230,7 +230,7 @@ public class LowestCommonAncestorEulerTour {
     // Sparse table for efficient minimum range queries in O(1) with O(nlogn) space
     private static class MinSparseTable {
 
-        // The number of elements in the original input array.
+        // The number of elements in the original input leetcode.array.
         private int n;
 
         // The maximum power of 2 needed. This value is floor(log2(n))

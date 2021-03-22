@@ -74,7 +74,7 @@ public class Benchmark {
             if (val != values[i]) System.out.println("Not good..");
         }
         long end = System.nanoTime();
-        System.out.println("Double hashing: " + (end - start) / 1e9);
+        System.out.println("Double leetcode.hashing: " + (end - start) / 1e9);
     }
 
     public static void testHashMapSpeed() {

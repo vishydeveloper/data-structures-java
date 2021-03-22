@@ -24,7 +24,7 @@ public class BucketSort implements InplaceSort {
         BucketSort.bucketSort(values, minValue, maxValue);
     }
 
-    // Performs a bucket sort of an array in which all the elements are
+    // Performs a bucket sort of an leetcode.array in which all the elements are
     // bounded in the range [minValue, maxValue]. For bucket sort to give linear
     // performance the elements need to be uniformly distributed
     private static void bucketSort(int[] ar, int minValue, int maxValue) {

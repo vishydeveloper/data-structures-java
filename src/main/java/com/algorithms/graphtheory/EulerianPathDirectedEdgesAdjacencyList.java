@@ -46,7 +46,7 @@ public class EulerianPathDirectedEdgesAdjacencyList {
         if (path.size() != edgeCount + 1) return null;
 
         // Instead of returning the 'path' as a linked list return
-        // the solution as a primitive array for convenience.
+        // the solution as a primitive leetcode.array for convenience.
         int[] soln = new int[edgeCount + 1];
         for (int i = 0; !path.isEmpty(); i++) soln[i] = path.removeFirst();
 

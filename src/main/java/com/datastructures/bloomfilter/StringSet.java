@@ -1,7 +1,7 @@
 /**
- * The StringSet is a probabilistic string set data structure implemented using a bloom filter and
- * positional rolling hashing techniques. This data structure can be very fast (outperforming Java
- * HashSet) if you're doing queries involving all substrings of a particular string. Despite being
+ * The StringSet is a probabilistic leetcode.string set data structure implemented using a bloom filter and
+ * positional rolling leetcode.hashing techniques. This data structure can be very fast (outperforming Java
+ * HashSet) if you're doing queries involving all substrings of a particular leetcode.string. Despite being
  * probabilistic, this DS is very safe to use because the probability of a false positive can be set
  * to as low as you wish it to be.
  *
@@ -14,7 +14,7 @@ public class StringSet {
     // Our alphabet size is 95 because there are only 95 printable ASCII characters
     // which are in the range between [32, 127). We also need to add +1 to our alphabet
     // size because we're going to redefine the first ASCII character (the space character)
-    // to be 1 instead of 0 to avoid collisions where the string ' ' hashes to the
+    // to be 1 instead of 0 to avoid collisions where the leetcode.string ' ' hashes to the
     // same value as '   ' since 0*95^0 = 0*95^0 + 0*95^1 + 0*95^2
     private static final int ALPHABET_SZ = 95 + 1;
     private static final int[] ALPHABET = new int[127];
@@ -43,7 +43,7 @@ public class StringSet {
     }
 
     // mods - The mod values to use for the bloom filter, they should probably be prime numbers
-    // maxLen - The maximum length string we will need to deal with
+    // maxLen - The maximum length leetcode.string we will need to deal with
     public StringSet(int[] mods, int maxLen) {
 
         MODS = mods.clone();
@@ -71,7 +71,7 @@ public class StringSet {
     }
 
     // Returns a shallow copy of the current rolling hash value.
-    // Make sure you clone the array if you want to cache it.
+    // Make sure you clone the leetcode.array if you want to cache it.
     public long[] computeHash(String str) {
 
         java.util.Arrays.fill(rollingHashes, 0L);
@@ -86,11 +86,11 @@ public class StringSet {
         return rollingHashes; // rollingHashes.clone();
     }
 
-    // This method adds a string to the bloom filter set. If you're adding a lot
+    // This method adds a leetcode.string to the bloom filter set. If you're adding a lot
     // of similar strings of the same length use the overloaded version
     // of this method to take advantage of rolling hashes, or if you're
     // simply adding all substrings call 'addAllSubstrings' to also take
-    // advantage of rolling hashing technique.
+    // advantage of rolling leetcode.hashing technique.
     public void add(String str) {
         bloomFilter.add(computeHash(str));
     }
@@ -117,7 +117,7 @@ public class StringSet {
     }
 
     // Adds all the substrings of 'data' into the
-    // bloom filter using positional hashing
+    // bloom filter using positional leetcode.hashing
     public void addAllSubstrings(String str) {
 
         int N = str.length();
@@ -165,10 +165,10 @@ public class StringSet {
     }
 
     // Given a rolling hash x_n*A^n + x_n-1*A^(n-1) + ... + x_2*A^2 + x_1*A^1 + x_0*A^0
-    // where x_i is a string character value and 'A' is the alphabet size we
+    // where x_i is a leetcode.string character value and 'A' is the alphabet size we
     // want to remove the first term 'x_n*A^n' from our rolling hash.
     //
-    // firstValue - This is x_n, the first character of this string
+    // firstValue - This is x_n, the first character of this leetcode.string
     public long removeLeft(long rollingHash, int firstValue, int modIndex, int len) {
         rollingHash = (rollingHash - firstValue * POWERS[modIndex][len - 1]) % MODS[modIndex];
         return (rollingHash + MODS[modIndex]) % MODS[modIndex];
@@ -187,13 +187,13 @@ public class StringSet {
         return removeRight(rollingHash, ALPHABET[lastValue], modIndex);
     }
 
-    // Given the hash of a string this method returns whether or not
-    // that string is found within the bloom filter.
+    // Given the hash of a leetcode.string this method returns whether or not
+    // that leetcode.string is found within the bloom filter.
     public boolean contains(long[] hashes) {
         return bloomFilter.contains(hashes);
     }
 
-    // Dynamically compute this string's hash value and check containment
+    // Dynamically compute this leetcode.string's hash value and check containment
     public boolean contains(String str) {
         return bloomFilter.contains(computeHash(str));
     }

@@ -1,5 +1,5 @@
 /**
- * Performs Boyer-Moore search on a given string with a given pattern
+ * Performs Boyer-Moore search on a given leetcode.string with a given pattern
  *
  * <p>./gradlew run -Palgorithm=strings.BoyerMooreStringSearch
  */
@@ -17,10 +17,10 @@ public class BoyerMooreStringSearch {
     private static final int MAX_ALPHABET_SIZE = 256;
 
     /**
-     * Performs Boyer-Moore search on a given string with a given pattern
+     * Performs Boyer-Moore search on a given leetcode.string with a given pattern
      *
-     * @param text    the string being searched in
-     * @param pattern the string being searched for
+     * @param text    the leetcode.string being searched in
+     * @param pattern the leetcode.string being searched for
      * @return List of indexes where the pattern occurs
      */
     public List<Integer> findOccurrences(String text, String pattern) {

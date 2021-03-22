@@ -1,8 +1,8 @@
 /**
- * This file shows you how to use a suffix array to construct the Longest Common Prefix (LCP) array
+ * This file shows you how to use a suffix leetcode.array to construct the Longest Common Prefix (LCP) leetcode.array
  * using the kasai algorithm.
  *
- * <p>Time complexity: O(nlogn) for suffix array construct and O(n) for longest common prefix array
+ * <p>Time complexity: O(nlogn) for suffix leetcode.array construct and O(n) for longest common prefix leetcode.array
  * construction, so O(nlogn) overall
  *
  * @author William Fiset, william.alexandre.fiset@gmail.com
@@ -19,7 +19,7 @@ public class LongestCommonPrefixArray {
         String str = "abcbbccaabcaabc";
         SuffixArray sa = new SuffixArray(str);
         sa.display();
-        System.out.println("The LCP array is: " + Arrays.toString(sa.lcp));
+        System.out.println("The LCP leetcode.array is: " + Arrays.toString(sa.lcp));
     }
 
     public static class SuffixArray {
@@ -78,7 +78,7 @@ public class LongestCommonPrefixArray {
             }
         }
 
-        // Use Kasai algorithm to build LCP array
+        // Use Kasai algorithm to build LCP leetcode.array
         private void kasai() {
             lcp = new int[N];
             int[] inv = new int[N];

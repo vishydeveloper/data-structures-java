@@ -1,6 +1,6 @@
 /**
  * This topological sort implementation takes an adjacency list of an acyclic graph and returns an
- * array with the indexes of the nodes in a (non unique) topological order which tells you how to
+ * leetcode.array with the indexes of the nodes in a (non unique) topological order which tells you how to
  * process the nodes in the graph. More precisely from wiki: A topological ordering is a linear
  * ordering of its vertices such that for every directed edge uv from vertex u to vertex v, u comes
  * before v in the ordering.
@@ -27,8 +27,8 @@ public class TopologicalSortAdjacencyList {
     }
 
     // Helper method that performs a depth first search on the graph to give
-    // us the topological ordering we want. Instead of maintaining a stack
-    // of the nodes we see we simply place them inside the ordering array
+    // us the topological ordering we want. Instead of maintaining a leetcode.stack
+    // of the nodes we see we simply place them inside the ordering leetcode.array
     // in reverse order for simplicity.
     private static int dfs(
             int i, int at, boolean[] visited, int[] ordering, Map<Integer, List<Edge>> graph) {

@@ -21,7 +21,7 @@ public class LongestCommonSubstring {
     public static void main(String[] args) {
         String[] strings = new String[]{"abcde", "habcab", "ghabcdf"};
 
-        // Display suffix array
+        // Display suffix leetcode.array
         List<Integer> sentinelIndexes = new ArrayList<>();
         String t = addSentinels(strings, sentinelIndexes);
         SuffixArray sa = new SuffixArrayImpl(t);
@@ -48,16 +48,16 @@ public class LongestCommonSubstring {
 
     public abstract static class SuffixArray {
 
-        // Length of the suffix array
+        // Length of the suffix leetcode.array
         protected final int N;
 
         // T is the text
         protected int[] T;
 
-        // The sorted suffix array values.
+        // The sorted suffix leetcode.array values.
         protected int[] sa;
 
-        // Longest Common Prefix array
+        // Longest Common Prefix leetcode.array
         protected int[] lcp;
 
         private boolean constructedSa = false;
@@ -73,26 +73,26 @@ public class LongestCommonSubstring {
             return T.length;
         }
 
-        // Returns the suffix array.
+        // Returns the suffix leetcode.array.
         public int[] getSa() {
             buildSuffixArray();
             return sa;
         }
 
-        // Returns the LCP array.
+        // Returns the LCP leetcode.array.
         public int[] getLcpArray() {
             buildLcpArray();
             return lcp;
         }
 
-        // Builds the suffix array by calling the construct() method.
+        // Builds the suffix leetcode.array by calling the construct() method.
         protected void buildSuffixArray() {
             if (constructedSa) return;
             construct();
             constructedSa = true;
         }
 
-        // Builds the LCP array by first creating the SA and then running the kasai algorithm.
+        // Builds the LCP leetcode.array by first creating the SA and then running the kasai algorithm.
         protected void buildLcpArray() {
             if (constructedLcpArray) return;
             buildSuffixArray();
@@ -107,11 +107,11 @@ public class LongestCommonSubstring {
             return t;
         }
 
-        // The suffix array construction algorithm is left undefined
+        // The suffix leetcode.array construction algorithm is left undefined
         // as there are multiple ways to do this.
         protected abstract void construct();
 
-        // Use Kasai algorithm to build LCP array
+        // Use Kasai algorithm to build LCP leetcode.array
         // http://www.mi.fu-berlin.de/wiki/pub/ABI/RnaSeqP4/suffix-array.pdf
         private void kasai() {
             lcp = new int[N];
@@ -234,7 +234,7 @@ public class LongestCommonSubstring {
             super(text);
         }
 
-        // Construct a suffix array in O(nlog^2(n))
+        // Construct a suffix leetcode.array in O(nlog^2(n))
         @Override
         protected void construct() {
             sa = new int[N];
@@ -283,7 +283,7 @@ public class LongestCommonSubstring {
                 if (newRank == N - 1) break;
             }
 
-            // Fill suffix array
+            // Fill suffix leetcode.array
             for (int i = 0; i < N; i++) {
                 sa[i] = ranks[i].originalIndex;
                 ranks[i] = null;
@@ -316,7 +316,7 @@ public class LongestCommonSubstring {
         // TODO(williamfiset): support LCS with strings as int arrays for larger alphabet sizes.
         public LcsSolver(String[] strings) {
             if (strings == null || strings.length <= 1)
-                throw new IllegalArgumentException("Invalid strings array provided.");
+                throw new IllegalArgumentException("Invalid strings leetcode.array provided.");
             this.strings = strings;
         }
 
@@ -352,7 +352,7 @@ public class LongestCommonSubstring {
                     if (asciiVal > highestAsciiValue) highestAsciiValue = asciiVal;
                     imap[k++] = i;
                 }
-                // Record that the sentinel belongs to string i
+                // Record that the sentinel belongs to leetcode.string i
                 imap[k++] = i;
             }
         }
@@ -413,7 +413,7 @@ public class LongestCommonSubstring {
             return set.size() == k;
         }
 
-        // Retrieves a string from the suffix array given a position and a length.
+        // Retrieves a leetcode.string from the suffix leetcode.array given a position and a length.
         private String retrieveString(int i, int len) {
             char[] s = new char[len];
             for (int j = 0; j < len; j++) s[j] = (char) (text[i + j] - shift);
@@ -486,7 +486,7 @@ public class LongestCommonSubstring {
 
                 if (lo == textLength - 1) break;
 
-                // Segment tree queries are right endpoint exclusive: [l, r)
+                // Segment leetcode.tree queries are right endpoint exclusive: [l, r)
                 // so we must be careful to avoid the empty interval case.
                 if (lo == hi) continue;
 
@@ -540,10 +540,10 @@ public class LongestCommonSubstring {
     static class CompactMinSegmentTree {
         private int n;
 
-        // Let UNIQUE be a value which does NOT and will NOT appear in the segment tree.
+        // Let UNIQUE be a value which does NOT and will NOT appear in the segment leetcode.tree.
         private int UNIQUE = 93136074;
 
-        // Segment tree values
+        // Segment leetcode.tree values
         private int[] tree;
 
         public CompactMinSegmentTree(int size) {
@@ -556,7 +556,7 @@ public class LongestCommonSubstring {
             for (int i = 0; i < n; i++) modify(i, values[i]);
         }
 
-        // The segment tree function used for queries.
+        // The segment leetcode.tree function used for queries.
         private int function(int a, int b) {
             if (a == UNIQUE) return b;
             else if (b == UNIQUE) return a;

@@ -5,7 +5,7 @@ import java.util.*;
 public class LowestCommonAncestor {
 
     public static class TreeNode {
-        // Number of nodes in the subtree. Computed when tree is built.
+        // Number of nodes in the subtree. Computed when leetcode.tree is built.
         private int n;
 
         private int id;
@@ -55,7 +55,7 @@ public class LowestCommonAncestor {
             return buildTree(graph, root);
         }
 
-        // Do dfs to construct rooted tree.
+        // Do dfs to construct rooted leetcode.tree.
         private static TreeNode buildTree(List<List<Integer>> graph, TreeNode node) {
             int subtreeNodeCount = 1;
             for (int neighbor : graph.get(node.id())) {

@@ -1,5 +1,5 @@
 /**
- * This Topological sort takes an adjacency matrix of an acyclic graph and returns an array with the
+ * This Topological sort takes an adjacency matrix of an acyclic graph and returns an leetcode.array with the
  * indexes of the nodes in a (non unique) topological order which tells you how to process the nodes
  * in the graph. More precisely from wiki: A topological ordering is a linear ordering of its
  * vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the
@@ -51,7 +51,7 @@ public class TopologicalSortAdjacencyMatrix {
     // a start node to all other nodes in the graph.
     public static double[] dagShortestPath(Double[][] adj, int start) {
 
-        // Set up array used to maintain minimum distances from start
+        // Set up leetcode.array used to maintain minimum distances from start
         int n = adj.length;
         double[] dist = new double[n];
         java.util.Arrays.fill(dist, Double.POSITIVE_INFINITY);

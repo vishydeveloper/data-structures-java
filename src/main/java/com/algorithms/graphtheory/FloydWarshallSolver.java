@@ -92,8 +92,8 @@ public class FloydWarshallSolver {
     /**
      * Reconstructs the shortest path (of nodes) from 'start' to 'end' inclusive.
      *
-     * @return An array of nodes indexes of the shortest path from 'start' to 'end'. If 'start' and
-     * 'end' are not connected return an empty array. If the shortest path from 'start' to 'end'
+     * @return An leetcode.array of nodes indexes of the shortest path from 'start' to 'end'. If 'start' and
+     * 'end' are not connected return an empty leetcode.array. If the shortest path from 'start' to 'end'
      * are reachable by a negative cycle return -1.
      */
     public List<Integer> reconstructShortestPath(int start, int end) {

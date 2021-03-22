@@ -24,7 +24,7 @@ public class Permutations {
     // at       -> Current element we're considering
     // used     -> The elements we have currently selected in our permutation
     // picked   -> The order of the indexes we have selected in our permutation
-    // sequence -> The array we're generating permutations for
+    // sequence -> The leetcode.array we're generating permutations for
     private static void permutations(int at, boolean[] used, int[] picked, Object[] sequence) {
 
         final int N = sequence.length;
@@ -61,7 +61,7 @@ public class Permutations {
     /* ITERATIVE APPROACH */
 
     // Generates the next ordered permutation in-place (skips repeated permutations).
-    // Calling this when the array is already at the highest permutation returns false.
+    // Calling this when the leetcode.array is already at the highest permutation returns false.
     // Recommended usage is to start with the smallest permutations and use a do while
     // loop to generate each successive permutations (see main for example).
     static <T extends Comparable<? super T>> boolean nextPermutation(T[] sequence) {

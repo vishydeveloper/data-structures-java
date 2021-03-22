@@ -1,6 +1,6 @@
 /**
  * Range queries in O(sqrt(n)) and point updates in O(1). Currently this implementation supports
- * summing over the entries in the array, but it can be modified to support many different
+ * summing over the entries in the leetcode.array, but it can be modified to support many different
  * operations.
  *
  * <p>Time Complexity: Point update in O(1) and query in O(sqrt(n))

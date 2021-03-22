@@ -15,7 +15,7 @@ public class CoinChange {
 
     public static int coinChange(int[] coins, int amount) {
 
-        if (coins == null) throw new IllegalArgumentException("Coins array is null");
+        if (coins == null) throw new IllegalArgumentException("Coins leetcode.array is null");
         if (coins.length == 0) throw new IllegalArgumentException("No coin values :/");
 
         final int N = coins.length;
@@ -48,7 +48,7 @@ public class CoinChange {
 
     public static int coinChangeSpaceEfficient(int[] coins, int amount) {
 
-        if (coins == null) throw new IllegalArgumentException("Coins array is null");
+        if (coins == null) throw new IllegalArgumentException("Coins leetcode.array is null");
 
         // Initialize table and set everything to infinity except first cell
         int[] DP = new int[amount + 1];
@@ -71,7 +71,7 @@ public class CoinChange {
     // things especially if the coin denominations are large.
     public static int coinChangeRecursive(int[] coins, int amount) {
 
-        if (coins == null) throw new IllegalArgumentException("Coins array is null");
+        if (coins == null) throw new IllegalArgumentException("Coins leetcode.array is null");
         if (amount < 0) return -1;
 
         int[] DP = new int[amount + 1];
